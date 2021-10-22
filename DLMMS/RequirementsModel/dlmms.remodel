@@ -8,6 +8,14 @@ UseCaseModel DLMMS {
 	UC::deployModel
 	UC::takeModelOffline
 	UC::searchOnlineModel
+	UC::addModelAccessPermission
+	UC::updateModelAccessPermission
+	UC::createModelSharingLink
+	UC::updateModelSharingLinkAccessPermission
+	UC::createOnlineModelAPI
+	UC::updateOnlineModelAPI
+	UC::downloadModelBySharingLink
+	UC::callOnlieModelAPI
 
 	Actor User {
 		uploadModel
@@ -18,6 +26,17 @@ UseCaseModel DLMMS {
 		deployModel
 		takeModelOffline
 		searchOnlineModel
+		addModelAccessPermission
+		updateModelAccessPermission
+		createModelSharingLink
+		updateModelSharingLinkAccessPermission
+		createOnlineModelAPI
+		updateOnlineModelAPI
+	}
+
+	Actor CommonUser {
+		downloadModelBySharingLink
+		callOnlieModelAPI
 	}
 
 	Interaction UploadModelSSD {
