@@ -16,6 +16,12 @@ UseCaseModel DLMMS {
 	UC::updateOnlineModelAPI
 	UC::downloadModelBySharingLink
 	UC::callOnlieModelAPI
+	UC::checkRunningStatus
+	UC::modifyRunningStatus
+	UC::defineSamplingRule
+	UC::findDataSet
+	UC::downloadDataSet
+	UC::deleteDataSet
 
 	Actor User {
 		uploadModel
@@ -32,6 +38,12 @@ UseCaseModel DLMMS {
 		updateModelSharingLinkAccessPermission
 		createOnlineModelAPI
 		updateOnlineModelAPI
+		checkRunningStatus
+		modifyRunningStatus
+		defineSamplingRule
+		findDataSet
+		downloadDataSet
+		deleteDataSet
 	}
 
 	Actor CommonUser {
