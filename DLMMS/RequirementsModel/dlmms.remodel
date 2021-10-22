@@ -1,2 +1,46 @@
-UseCaseModel DLMMS {Service DLMMSSystem {} Service ThirdPartyServices {}}
-DomainModel DLMMS {}
+UseCaseModel DLMMS {
+
+	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
+	UC::deleteModel
+	UC::searchModel
+	UC::manageModelVersion
+	UC::downloadModel
+	UC::deployModel
+	UC::takeModelOffline
+	UC::searchOnlineModel
+
+	Actor User {
+		uploadModel
+		deleteModel
+		searchModel
+		manageModelVersion
+		downloadModel
+		deployModel
+		takeModelOffline
+		searchOnlineModel
+	}
+
+	Interaction UploadModelSSD {
+
+		[Participants: UploadModelService]
+
+	}
+
+	Service DLMMSSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service UploadModelService {
+
+	}
+
+}
+
+DomainModel DLMMS {
+
+}
+
