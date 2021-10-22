@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:rEMODEL="http://www.mydreamy.net/requirementmodel/REMODEL" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_qmEowDLgEeyIycYbz8sAYw" selectedViews="_qn6b0DLgEeyIycYbz8sAYw" version="14.3.1.202003261200">
+    <semanticResources>dlmms.remodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_qn6b0DLgEeyIycYbz8sAYw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qpESYDLgEeyIycYbz8sAYw" name="DLMMS Conceptual Class Diagram" repPath="#_qonmcDLgEeyIycYbz8sAYw" changeId="284a6b50-af04-4ece-bec8-406f261e68ad">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
+        <target xmi:type="rEMODEL:DomainModel" href="dlmms.remodel#//@DomainModel"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_q7wk4TLgEeyIycYbz8sAYw" name="DLMMS Use Case Diagram" repPath="#_q7vWwDLgEeyIycYbz8sAYw" changeId="af617204-132f-4796-8dcf-3bcf7a55b4f2">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']"/>
+        <target xmi:type="rEMODEL:UseCaseModel" href="dlmms.remodel#//@UseCaseModel"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_qonmcDLgEeyIycYbz8sAYw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_qpZpkDLgEeyIycYbz8sAYw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_qpZpkTLgEeyIycYbz8sAYw" type="Sirius" element="_qonmcDLgEeyIycYbz8sAYw" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_qpZpkjLgEeyIycYbz8sAYw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_qsGYQDLgEeyIycYbz8sAYw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_qsG_UDLgEeyIycYbz8sAYw"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_qo0awDLgEeyIycYbz8sAYw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Conceptual%20Class%20Diagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:DomainModel" href="dlmms.remodel#//@DomainModel"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_q7vWwDLgEeyIycYbz8sAYw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_q7xL8DLgEeyIycYbz8sAYw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_q7xL8TLgEeyIycYbz8sAYw" type="Sirius" element="_q7vWwDLgEeyIycYbz8sAYw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_q8I_YDLgEeyIycYbz8sAYw" type="2002" element="_q72EcDLgEeyIycYbz8sAYw">
+          <children xmi:type="notation:Node" xmi:id="_q8MCsDLgEeyIycYbz8sAYw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_q8N34DLgEeyIycYbz8sAYw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_q8N34TLgEeyIycYbz8sAYw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_q8N34jLgEeyIycYbz8sAYw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_q8I_YTLgEeyIycYbz8sAYw" fontName=".AppleSystemUIFont" fontHeight="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_q8I_YjLgEeyIycYbz8sAYw" x="32" y="20"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_q7xL8jLgEeyIycYbz8sAYw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_q8C4wDLgEeyIycYbz8sAYw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_q8C4wTLgEeyIycYbz8sAYw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_q72EcDLgEeyIycYbz8sAYw" name="DLMMS">
+      <target xmi:type="rEMODEL:UseCaseModel" href="dlmms.remodel#//@UseCaseModel"/>
+      <semanticElements xmi:type="rEMODEL:UseCaseModel" href="dlmms.remodel#//@UseCaseModel"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_q7-AQDLgEeyIycYbz8sAYw" labelSize="20" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='UseCaseModel']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']/@defaultLayer/@containerMappings[name='UseCaseModel']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_q7vWwTLgEeyIycYbz8sAYw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/net.mydreamy.requirementmodel.design/description/requirementmodel.odesign#//@ownedViewpoints[name='RequirementModel']/@ownedRepresentations[name='Use%20Case%20Diagram']/@defaultLayer"/>
+    <target xmi:type="rEMODEL:UseCaseModel" href="dlmms.remodel#//@UseCaseModel"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
