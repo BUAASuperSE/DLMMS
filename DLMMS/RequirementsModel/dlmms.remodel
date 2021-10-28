@@ -3,50 +3,53 @@ UseCaseModel DLMMS {
 	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
 	UC::deleteModel
 	UC::searchModel
-	UC::manageModelVersion
+	UC::manageModelVersion include addVersionTag, changeVersionTag, deleteVersionTag
 	UC::downloadModel
 	UC::deployModel
-	UC::takeModelOffline
+	UC::stopOnlineModel extend modifyRunningStatus
 	UC::searchOnlineModel
 	UC::addModelAccessPermission
 	UC::updateModelAccessPermission
 	UC::createModelSharingLink
 	UC::updateModelSharingLinkAccessPermission
 	UC::createOnlineModelAPI
-	UC::updateOnlineModelAPI
+	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
-	UC::callOnlieModelAPI
+	UC::callOnlieModelAPI include checkRunningStatus
 	UC::checkRunningStatus
-	UC::modifyRunningStatus
-	UC::defineSamplingRule
+	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
+	UC::defineSamplingRule extend findDataSet
 	UC::findDataSet
 	UC::downloadDataSet
 	UC::deleteDataSet
+	UC::addVersionTag
+	UC::changeVersionTag
+	UC::deleteVersionTag
 
-	Actor User {
+	Actor  Model Owner {
 		uploadModel
-		deleteModel
 		searchModel
+		deleteModel
 		manageModelVersion
 		downloadModel
 		deployModel
-		takeModelOffline
+		stopOnlineModel
 		searchOnlineModel
 		addModelAccessPermission
-		updateModelAccessPermission
 		createModelSharingLink
 		updateModelSharingLinkAccessPermission
 		createOnlineModelAPI
 		updateOnlineModelAPI
-		checkRunningStatus
+		updateModelAccessPermission
 		modifyRunningStatus
+		checkRunningStatus
 		defineSamplingRule
 		findDataSet
 		downloadDataSet
 		deleteDataSet
 	}
 
-	Actor CommonUser {
+	Actor  Model User {
 		downloadModelBySharingLink
 		callOnlieModelAPI
 	}
@@ -54,6 +57,12 @@ UseCaseModel DLMMS {
 	Interaction UploadModelSSD {
 
 		[Participants: UploadModelService]
+
+	}
+
+	Interaction ModifyRunningStatusSSD {
+
+		[Participants: ModifyRunningStatusService]
 
 	}
 
@@ -66,6 +75,10 @@ UseCaseModel DLMMS {
 	}
 
 	Service UploadModelService {
+
+	}
+
+Service ModifyRunningStatusService {
 
 	}
 
