@@ -1,4 +1,4 @@
-UseCaseModel DLMMS {
+UseCaseModel Dlmms {
 
 	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
 	UC::deleteModel
@@ -15,7 +15,7 @@ UseCaseModel DLMMS {
 	UC::createOnlineModelAPI
 	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
-	UC::callOnlieModelAPI include checkRunningStatus
+	UC::callOnlineModelAPI include checkRunningStatus
 	UC::checkRunningStatus
 	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
 	UC::defineSamplingRule extend findDataSet
@@ -51,7 +51,7 @@ UseCaseModel DLMMS {
 
 	Actor  ModelUser {
 		downloadModelBySharingLink
-		callOnlieModelAPI
+		callOnlineModelAPI
 	}
 
 	Interaction UploadModelSSD {
