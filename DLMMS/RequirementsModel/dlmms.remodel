@@ -195,7 +195,13 @@ UseCaseModel DLMMS {
 
 	}
 
-	Service ModifyRunningStatusService {
+	Service FindDatasetService {
+
+		[Operation]
+		selectModel(modelId)
+		selectRule(ruleId)
+		selectDuration(start, end)
+		getDatasetList()
 
 		[Operation]
 		selectModel(modelId)
@@ -204,7 +210,7 @@ UseCaseModel DLMMS {
 
 	}
 
-	Service UpdateModelAccessPermissionService {
+	Service CheckRunningStatusService {
 
 		[Operation]
 		updatePermission(permission)
