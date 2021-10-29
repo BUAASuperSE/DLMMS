@@ -159,7 +159,6 @@ UseCaseModel DLMMS {
 		selectModel(modelId)
 		selectRule(ruleId)
 		getDataset(start, end)
-		getDatasetList()
 
 	}
 
