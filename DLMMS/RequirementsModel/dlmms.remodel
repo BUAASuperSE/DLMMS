@@ -1,4 +1,4 @@
-UseCaseModel Dlmms {
+UseCaseModel DLMMS {
 
 	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
 	UC::deleteModel
@@ -9,7 +9,7 @@ UseCaseModel Dlmms {
 	UC::stopOnlineModel extend modifyRunningStatus
 	UC::searchOnlineModel
 	UC::addModelAccessPermission
-	UC::updateModelAccessPermission
+	UC::updateModelAccessPermission definedBySSD(UpdateModelAccessPermissionSSD) relatedService(UpdateModelAccessPermissionService)
 	UC::createModelSharingLink
 	UC::updateModelSharingLinkAccessPermission
 	UC::createOnlineModelAPI
@@ -66,6 +66,22 @@ UseCaseModel Dlmms {
 
 	}
 
+	Interaction UpdateModelAccessPermissionSSD {
+
+		[Participants: ModelOwner UpdateModelAccessPermissionService]
+
+		CallMessage::UpdateModelAccessPermissionSSDCallMessage1(updatePermission UpdateModelAccessPermissionSSDCallMessage1SendingEnd -> UpdateModelAccessPermissionSSDExecution1StartEnd)
+		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage1Return(UpdateModelAccessPermissionSSDExecution1FinishEnd -> UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage1)
+
+		Execution::UpdateModelAccessPermissionSSDExecution1(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1StartEnd UpdateModelAccessPermissionSSDExecution1FinishEnd)
+
+		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1SendingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1)
+		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1StartEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
+		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1FinishEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
+		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1Return)
+
+	}
+
 	Service DLMMSSystem {
 
 	}
@@ -82,9 +98,27 @@ UseCaseModel Dlmms {
 
 	}
 
+	Service UpdateModelAccessPermissionService {
+
+		[Operation]
+		updatePermission(permission)
+
+	}
+
+	Contract UpdateModelAccessPermissionService::updatePermission(permission : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.AccessPermission = permission)
+
+		precondition:
+			true
+		postcondition:
+			true
+	}
+
 }
 
-DomainModel Dlmms {
+DomainModel DLMMS {
 
 	Entity ModelOwner extends User {
 		OwnModelList : String
@@ -144,3 +178,4 @@ DomainModel Dlmms {
 	}
 
 }
+
