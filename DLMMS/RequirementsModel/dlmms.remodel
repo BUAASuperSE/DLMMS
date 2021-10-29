@@ -1,10 +1,84 @@
 UseCaseModel Dlmms {
 
-	Service DlmmsSystem {
+	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
+	UC::deleteModel
+	UC::searchModel
+	UC::manageModelVersion include addVersionTag, changeVersionTag, deleteVersionTag
+	UC::downloadModel
+	UC::deployModel
+	UC::stopOnlineModel extend modifyRunningStatus
+	UC::searchOnlineModel
+	UC::addModelAccessPermission
+	UC::updateModelAccessPermission
+	UC::createModelSharingLink
+	UC::updateModelSharingLinkAccessPermission
+	UC::createOnlineModelAPI
+	UC::updateOnlineModelAPI include checkRunningStatus
+	UC::downloadModelBySharingLink
+	UC::callOnlineModelAPI include checkRunningStatus
+	UC::checkRunningStatus
+	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
+	UC::defineSamplingRule extend findDataSet
+	UC::findDataSet
+	UC::downloadDataSet
+	UC::deleteDataSet
+	UC::addVersionTag
+	UC::changeVersionTag
+	UC::deleteVersionTag
+
+	Actor  ModelOwner {
+		uploadModel
+		searchModel
+		deleteModel
+		manageModelVersion
+		downloadModel
+		deployModel
+		stopOnlineModel
+		searchOnlineModel
+		addModelAccessPermission
+		createModelSharingLink
+		updateModelSharingLinkAccessPermission
+		createOnlineModelAPI
+		updateOnlineModelAPI
+		updateModelAccessPermission
+		modifyRunningStatus
+		checkRunningStatus
+		defineSamplingRule
+		findDataSet
+		downloadDataSet
+		deleteDataSet
+	}
+
+	Actor  ModelUser {
+		downloadModelBySharingLink
+		callOnlineModelAPI
+	}
+
+	Interaction UploadModelSSD {
+
+		[Participants: UploadModelService]
+
+	}
+
+	Interaction ModifyRunningStatusSSD {
+
+		[Participants: ModifyRunningStatusService]
+
+	}
+
+	Service DLMMSSystem {
 
 	}
 
 	Service ThirdPartyServices {
+
+	}
+
+	Service UploadModelService {
+
+	}
+
+	Service ModifyRunningStatusService {
 
 	}
 
@@ -70,4 +144,3 @@ DomainModel Dlmms {
 	}
 
 }
-
