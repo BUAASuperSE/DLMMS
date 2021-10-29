@@ -1,90 +1,55 @@
-UseCaseModel DLMMS {
+UseCaseModel Tt {Service TtSystem {} Service ThirdPartyServices {}}
+DomainModel Tt {
 
-	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
-	UC::deleteModel
-	UC::searchModel
-	UC::manageModelVersion include addVersionTag, changeVersionTag, deleteVersionTag
-	UC::downloadModel
-	UC::deployModel
-	UC::stopOnlineModel extend modifyRunningStatus
-	UC::searchOnlineModel
-	UC::addModelAccessPermission
-	UC::updateModelAccessPermission
-	UC::createModelSharingLink
-	UC::updateModelSharingLinkAccessPermission
-	UC::createOnlineModelAPI
-	UC::updateOnlineModelAPI include checkRunningStatus
-	UC::downloadModelBySharingLink
-	UC::callOnlieModelAPI include checkRunningStatus
-	UC::checkRunningStatus
-	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
-	UC::defineSamplingRule extend findDataSet
-	UC::findDataSet
-	UC::downloadDataSet
-	UC::deleteDataSet
-	UC::addVersionTag
-	UC::changeVersionTag
-	UC::deleteVersionTag
+	Entity modelOwner extends user {
+		ownModelList : String
 
-	Actor  Model Owner {
-		uploadModel
-		searchModel
-		deleteModel
-		manageModelVersion
-		downloadModel
-		deployModel
-		stopOnlineModel
-		searchOnlineModel
-		addModelAccessPermission
-		createModelSharingLink
-		updateModelSharingLinkAccessPermission
-		createOnlineModelAPI
-		updateOnlineModelAPI
-		updateModelAccessPermission
-		modifyRunningStatus
-		checkRunningStatus
-		defineSamplingRule
-		findDataSet
-		downloadDataSet
-		deleteDataSet
+		[Refer]
+		ModelOwnertoModel : model Association
 	}
 
-	Actor  Model User {
-		downloadModelBySharingLink
-		callOnlieModelAPI
+	Entity modelRunningService {
+		runingStatus : String
+		serviceId : String
+		serviceRunningTime : String
+		samplingRules : String
+
+		[Refer]
+		ModelRunningServicetoDataSet : dataSet Association
 	}
 
-	Interaction UploadModelSSD {
-
-		[Participants: UploadModelService]
-
+	Entity modelManager extends user {
+		manageModelList : String
 	}
 
-	Interaction ModifyRunningStatusSSD {
-
-		[Participants: ModifyRunningStatusService]
-
+	Entity outsideUser extends user {
+		accessPermission : String
 	}
 
-	Service DLMMSSystem {
-
+	Entity dataSet {
+		dataSetID : String
+		dataSetInfo : String
+		dataSetDescription : String
+		dataSetCreateTime : String
+		dataSetSize : String
 	}
 
-	Service ThirdPartyServices {
+	Entity model {
+		accessPermission : String
+		accessLink : String
+		accessLinkState : String
+		modelDescription : String
+		modelContent : String
 
+		[Refer]
+		ModeltoModelManager : modelManager Association
+		ModeltoModelRunningService : modelRunningService Association
 	}
 
-	Service UploadModelService {
-
+	Entity user {
+		UserId : String
+		userName : String
 	}
-
-Service ModifyRunningStatusService {
-
-	}
-
-}
-
-DomainModel DLMMS {
 
 }
 
