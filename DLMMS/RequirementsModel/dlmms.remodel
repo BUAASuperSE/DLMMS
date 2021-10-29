@@ -111,15 +111,12 @@ UseCaseModel DLMMS {
 		ReturnMessage::FindDatasetSSDCallMessage1Return(FindDatasetSSDExecution1FinishEnd -> FindDatasetSSDCallMessage1ReturnReceivingEnd FindDatasetSSDCallMessage1)
 		CallMessage::FindDatasetSSDCallMessage3(selectRule FindDatasetSSDCallMessage3SendingEnd -> FindDatasetSSDExecution2StartEnd)
 		ReturnMessage::FindDatasetSSDCallMessage3Return(FindDatasetSSDExecution2FinishEnd -> FindDatasetSSDCallMessage3ReturnReceivingEnd FindDatasetSSDCallMessage3)
-		CallMessage::FindDatasetSSDCallMessage5(selectDuration FindDatasetSSDCallMessage5SendingEnd -> FindDatasetSSDExecution3StartEnd)
+		CallMessage::FindDatasetSSDCallMessage5(getDataset FindDatasetSSDCallMessage5SendingEnd -> FindDatasetSSDExecution3StartEnd)
 		ReturnMessage::FindDatasetSSDCallMessage5Return(FindDatasetSSDExecution3FinishEnd -> FindDatasetSSDCallMessage5ReturnReceivingEnd FindDatasetSSDCallMessage5)
-		CallMessage::FindDatasetSSDCallMessage7(getDatasetList FindDatasetSSDCallMessage7SendingEnd -> FindDatasetSSDExecution4StartEnd)
-		ReturnMessage::FindDatasetSSDCallMessage7Return(FindDatasetSSDExecution4FinishEnd -> FindDatasetSSDCallMessage7ReturnReceivingEnd FindDatasetSSDCallMessage7)
 
 		Execution::FindDatasetSSDExecution1(FindDatasetService FindDatasetSSDExecution1StartEnd FindDatasetSSDExecution1FinishEnd)
 		Execution::FindDatasetSSDExecution2(FindDatasetService FindDatasetSSDExecution2StartEnd FindDatasetSSDExecution2FinishEnd)
 		Execution::FindDatasetSSDExecution3(FindDatasetService FindDatasetSSDExecution3StartEnd FindDatasetSSDExecution3FinishEnd)
-		Execution::FindDatasetSSDExecution4(FindDatasetService FindDatasetSSDExecution4StartEnd FindDatasetSSDExecution4FinishEnd)
 
 		MessageEnd::FindDatasetSSDCallMessage1SendingEnd(ModelOwner FindDatasetSSDCallMessage1)
 		ExecutionEnd::FindDatasetSSDExecution1StartEnd(FindDatasetService FindDatasetSSDExecution1)
@@ -133,10 +130,6 @@ UseCaseModel DLMMS {
 		ExecutionEnd::FindDatasetSSDExecution3StartEnd(FindDatasetService FindDatasetSSDExecution3)
 		ExecutionEnd::FindDatasetSSDExecution3FinishEnd(FindDatasetService FindDatasetSSDExecution3)
 		MessageEnd::FindDatasetSSDCallMessage5ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage5Return)
-		MessageEnd::FindDatasetSSDCallMessage7SendingEnd(ModelOwner FindDatasetSSDCallMessage7)
-		ExecutionEnd::FindDatasetSSDExecution4StartEnd(FindDatasetService FindDatasetSSDExecution4)
-		ExecutionEnd::FindDatasetSSDExecution4FinishEnd(FindDatasetService FindDatasetSSDExecution4)
-		MessageEnd::FindDatasetSSDCallMessage7ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage7Return)
 
 	}
 
@@ -165,7 +158,7 @@ UseCaseModel DLMMS {
 		[Operation]
 		selectModel(modelId)
 		selectRule(ruleId)
-		selectDuration(start, end)
+		getDataset(start, end)
 		getDatasetList()
 
 	}
@@ -196,6 +189,100 @@ UseCaseModel DLMMS {
 			true
 	}
 
+	// 下面是 CallOnlineModel 的相关合约
+	Contract CallOnlineModelAPIService::callOnlineModelAsync(modelId: String, args: String): String {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.ModelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				// TODO: how to call the method of another service
+				self.ModelService = CheckRunningStatusService.checkModelRunningStatus and
+				self.Args = args and
+				result = self.generateCallId
+			else
+				result = ""
+			endif
+	}
+
+	Contract CheckRunningStatusService::checkModelRunningStatus(modelId: String): ModelRunningService {
+
+		definition:
+			modelService:ModelRunningService = ModelRunningService.allInstance()->any(s:ModelRunningService | s.ModelId = modelId)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(modelService.oclIsUndefined() = false)
+			then
+				result = modelService
+			else
+				result = null
+			endif
+	}
+
+	Contract CallOnlineModelAPIService::getCallResult(callId: String): String {
+
+		precondition:
+			self.checkCallId = true
+		postcondition:
+			result = self.queryCallResult
+	}
+
+	// 下面是 FindDataset 的相关合约
+	Contract FindDatasetService::selectModel(modelId: String): Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.ModelId = modelId)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract FindDatasetService::selectRule(ruleId: String): Boolean {
+
+		definition:
+			modelService:ModelRunningService = ModelRunningService.allInstance()->any(s:ModelRunningService | s.ModelId = self.Model.ModelId and s.SamplingRuleId=ruleId)
+
+		precondition:
+			self.Model.oclIsUndefined() = false
+
+		postcondition:
+			if
+				(modelService.oclIsUndefined() = false)
+			then
+				self.ModelService = modelService and
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract FindDatasetService::getDataset(start: Date, end: Date): DataSet {
+
+		precondition:
+			end > start
+		postcondition:
+			// TODO: fix this method
+			result = self.ModelService.generateDataset
+	}
+
 }
 
 DomainModel DLMMS {
@@ -211,7 +298,8 @@ DomainModel DLMMS {
 		RuningStatus : String
 		ServiceId : String
 		ServiceRunningTime : String
-		SamplingRules : String
+		SamplingRuleId : String
+		ModelId : String
 
 		[Refer]
 		ModelRunningServicetoDataSet : DataSet Association
@@ -239,6 +327,7 @@ DomainModel DLMMS {
 		AccessLinkState : String
 		ModelDescription : String
 		ModelContent : String
+		ModelId : String
 
 		[Refer]
 		ModeltoModelManager : ModelManager Association
