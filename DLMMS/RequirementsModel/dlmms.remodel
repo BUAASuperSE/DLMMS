@@ -1,4 +1,4 @@
-UseCaseModel Dlmms {
+UseCaseModel DLMMS {
 
 	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
 	UC::deleteModel
@@ -84,7 +84,7 @@ UseCaseModel Dlmms {
 
 }
 
-DomainModel Dlmms {
+DomainModel DLMMS {
 
 	Entity ModelOwner extends User {
 		OwnModelList : String
@@ -144,3 +144,4 @@ DomainModel Dlmms {
 	}
 
 }
+
