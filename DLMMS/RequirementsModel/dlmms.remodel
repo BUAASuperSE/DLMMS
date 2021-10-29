@@ -1,54 +1,72 @@
-UseCaseModel Tt {Service TtSystem {} Service ThirdPartyServices {}}
-DomainModel Tt {
+UseCaseModel Dlmms {
 
-	Entity modelOwner extends user {
-		ownModelList : String
+	Service DlmmsSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+}
+
+DomainModel Dlmms {
+
+	Entity ModelOwner extends User {
+		OwnModelList : String
 
 		[Refer]
-		ModelOwnertoModel : model Association
+		ModelOwnertoModel : Model Association
 	}
 
-	Entity modelRunningService {
-		runingStatus : String
-		serviceId : String
-		serviceRunningTime : String
-		samplingRules : String
+	Entity ModelRunningService {
+		RuningStatus : String
+		ServiceId : String
+		ServiceRunningTime : String
+		SamplingRules : String
 
 		[Refer]
-		ModelRunningServicetoDataSet : dataSet Association
+		ModelRunningServicetoDataSet : DataSet Association
 	}
 
-	Entity modelManager extends user {
-		manageModelList : String
+	Entity ModelManager extends User {
+		ManageModelList : String
 	}
 
-	Entity outsideUser extends user {
-		accessPermission : String
+	Entity OutsideUser extends User {
+		AccessPermission : String
 	}
 
-	Entity dataSet {
-		dataSetID : String
-		dataSetInfo : String
-		dataSetDescription : String
-		dataSetCreateTime : String
-		dataSetSize : String
+	Entity DataSet {
+		DataSetID : String
+		DataSetInfo : String
+		DataSetDescription : String
+		DataSetCreateTime : String
+		DataSetSize : String
 	}
 
-	Entity model {
-		accessPermission : String
-		accessLink : String
-		accessLinkState : String
-		modelDescription : String
-		modelContent : String
+	Entity Model {
+		AccessPermission : String
+		AccessLink : String
+		AccessLinkState : String
+		ModelDescription : String
+		ModelContent : String
 
 		[Refer]
-		ModeltoModelManager : modelManager Association
-		ModeltoModelRunningService : modelRunningService Association
+		ModeltoModelManager : ModelManager Association
+		ModeltoModelRunningService : ModelRunningService Association
 	}
 
-	Entity user {
+	Entity ModelList {
+		ModelSize : String
+
+		[Refer]
+		ModelListtoModel : Model Association
+	}
+
+	Entity User {
 		UserId : String
-		userName : String
+		UserName : String
 	}
 
 }
