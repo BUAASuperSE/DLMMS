@@ -15,7 +15,7 @@ UseCaseModel DLMMS {
 	UC::createOnlineModelAPI
 	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
-	UC::callOnlineModelAPI include checkRunningStatus
+	UC::callOnlineModelAPI include checkRunningStatus definedBySSD(CallOnlineModelAPISSD) relatedService(CallOnlineModelAPIService)
 	UC::checkRunningStatus
 	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
 	UC::defineSamplingRule extend findDataSet
@@ -54,15 +54,9 @@ UseCaseModel DLMMS {
 		callOnlineModelAPI
 	}
 
-	Interaction UploadModelSSD {
-
-		[Participants: UploadModelService]
-
-	}
-
 	Interaction ModifyRunningStatusSSD {
 
-		[Participants: ModifyRunningStatusService]
+		[Participants: ModelOwner ModifyRunningStatusService]
 
 	}
 
@@ -70,27 +64,79 @@ UseCaseModel DLMMS {
 
 		[Participants: ModelOwner UpdateModelAccessPermissionService]
 
-		CallMessage::UpdateModelAccessPermissionSSDCallMessage1(updatePermission UpdateModelAccessPermissionSSDCallMessage1SendingEnd -> UpdateModelAccessPermissionSSDExecution1StartEnd)
-		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage1Return(UpdateModelAccessPermissionSSDExecution1FinishEnd -> UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage1)
+	}
 
-		Execution::UpdateModelAccessPermissionSSDExecution1(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1StartEnd UpdateModelAccessPermissionSSDExecution1FinishEnd)
+	Interaction CallOnlineModelAPISSD {
 
-		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1SendingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1)
-		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1StartEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
-		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1FinishEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
-		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1Return)
+		[Participants: ModelUser CallOnlineModelAPIService CheckRunningStatusService]
+
+		CallMessage::CallOnlineModelAPISSDCallMessage1(callOnlineModelAsync CallOnlineModelAPISSDCallMessage1SendingEnd -> CallOnlineModelAPISSDExecution1StartEnd)
+		ReturnMessage::CallOnlineModelAPISSDCallMessage1Return(CallOnlineModelAPISSDExecution1FinishEnd -> CallOnlineModelAPISSDCallMessage1ReturnReceivingEnd CallOnlineModelAPISSDCallMessage1)
+		CallMessage::CallOnlineModelAPISSDCallMessage3(checkModelRunningStatus CallOnlineModelAPISSDCallMessage3SendingEnd -> CallOnlineModelAPISSDExecution2StartEnd)
+		ReturnMessage::CallOnlineModelAPISSDCallMessage3Return(CallOnlineModelAPISSDExecution2FinishEnd -> CallOnlineModelAPISSDCallMessage3ReturnReceivingEnd CallOnlineModelAPISSDCallMessage3)
+		CallMessage::CallOnlineModelAPISSDCallMessage5(awaitCallResult CallOnlineModelAPISSDCallMessage5SendingEnd -> CallOnlineModelAPISSDExecution3StartEnd)
+		ReturnMessage::CallOnlineModelAPISSDCallMessage5Return(CallOnlineModelAPISSDExecution3FinishEnd -> CallOnlineModelAPISSDCallMessage5ReturnReceivingEnd CallOnlineModelAPISSDCallMessage5)
+		CallMessage::CallOnlineModelAPISSDCallMessage7(getCallResult CallOnlineModelAPISSDCallMessage7SendingEnd -> CallOnlineModelAPISSDExecution4StartEnd)
+		ReturnMessage::CallOnlineModelAPISSDCallMessage7Return(CallOnlineModelAPISSDExecution4FinishEnd -> CallOnlineModelAPISSDCallMessage7ReturnReceivingEnd CallOnlineModelAPISSDCallMessage7)
+
+		Execution::CallOnlineModelAPISSDExecution1(CallOnlineModelAPIService CallOnlineModelAPISSDExecution1StartEnd CallOnlineModelAPISSDExecution1FinishEnd)
+		Execution::CallOnlineModelAPISSDExecution2(CheckRunningStatusService CallOnlineModelAPISSDExecution2StartEnd CallOnlineModelAPISSDExecution2FinishEnd)
+		Execution::CallOnlineModelAPISSDExecution3(CallOnlineModelAPIService CallOnlineModelAPISSDExecution3StartEnd CallOnlineModelAPISSDExecution3FinishEnd)
+		Execution::CallOnlineModelAPISSDExecution4(CallOnlineModelAPIService CallOnlineModelAPISSDExecution4StartEnd CallOnlineModelAPISSDExecution4FinishEnd)
+
+		MessageEnd::CallOnlineModelAPISSDCallMessage1SendingEnd(ModelUser CallOnlineModelAPISSDCallMessage1)
+		ExecutionEnd::CallOnlineModelAPISSDExecution1StartEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution1)
+		MessageEnd::CallOnlineModelAPISSDCallMessage3SendingEnd(CallOnlineModelAPISSDExecution1 CallOnlineModelAPISSDCallMessage3)
+		ExecutionEnd::CallOnlineModelAPISSDExecution2StartEnd(CheckRunningStatusService CallOnlineModelAPISSDExecution2)
+		ExecutionEnd::CallOnlineModelAPISSDExecution2FinishEnd(CheckRunningStatusService CallOnlineModelAPISSDExecution2)
+		MessageEnd::CallOnlineModelAPISSDCallMessage3ReturnReceivingEnd(CallOnlineModelAPISSDExecution1 CallOnlineModelAPISSDCallMessage3Return)
+		ExecutionEnd::CallOnlineModelAPISSDExecution1FinishEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution1)
+		MessageEnd::CallOnlineModelAPISSDCallMessage1ReturnReceivingEnd(ModelUser CallOnlineModelAPISSDCallMessage1Return)
+		MessageEnd::CallOnlineModelAPISSDCallMessage5SendingEnd(ModelUser CallOnlineModelAPISSDCallMessage5)
+		ExecutionEnd::CallOnlineModelAPISSDExecution3StartEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution3)
+		ExecutionEnd::CallOnlineModelAPISSDExecution3FinishEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution3)
+		MessageEnd::CallOnlineModelAPISSDCallMessage5ReturnReceivingEnd(ModelUser CallOnlineModelAPISSDCallMessage5Return)
+		MessageEnd::CallOnlineModelAPISSDCallMessage7SendingEnd(ModelUser CallOnlineModelAPISSDCallMessage7)
+		ExecutionEnd::CallOnlineModelAPISSDExecution4StartEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution4)
+		ExecutionEnd::CallOnlineModelAPISSDExecution4FinishEnd(CallOnlineModelAPIService CallOnlineModelAPISSDExecution4)
+		MessageEnd::CallOnlineModelAPISSDCallMessage7ReturnReceivingEnd(ModelUser CallOnlineModelAPISSDCallMessage7Return)
 
 	}
 
-	Service DLMMSSystem {
+	Interaction FindDatasetSSD {
 
-	}
+		[Participants: ModelOwner FindDatasetService]
 
-	Service ThirdPartyServices {
+		CallMessage::FindDatasetSSDCallMessage1(selectModel FindDatasetSSDCallMessage1SendingEnd -> FindDatasetSSDExecution1StartEnd)
+		ReturnMessage::FindDatasetSSDCallMessage1Return(FindDatasetSSDExecution1FinishEnd -> FindDatasetSSDCallMessage1ReturnReceivingEnd FindDatasetSSDCallMessage1)
+		CallMessage::FindDatasetSSDCallMessage3(selectRule FindDatasetSSDCallMessage3SendingEnd -> FindDatasetSSDExecution2StartEnd)
+		ReturnMessage::FindDatasetSSDCallMessage3Return(FindDatasetSSDExecution2FinishEnd -> FindDatasetSSDCallMessage3ReturnReceivingEnd FindDatasetSSDCallMessage3)
+		CallMessage::FindDatasetSSDCallMessage5(selectDuration FindDatasetSSDCallMessage5SendingEnd -> FindDatasetSSDExecution3StartEnd)
+		ReturnMessage::FindDatasetSSDCallMessage5Return(FindDatasetSSDExecution3FinishEnd -> FindDatasetSSDCallMessage5ReturnReceivingEnd FindDatasetSSDCallMessage5)
+		CallMessage::FindDatasetSSDCallMessage7(getDatasetList FindDatasetSSDCallMessage7SendingEnd -> FindDatasetSSDExecution4StartEnd)
+		ReturnMessage::FindDatasetSSDCallMessage7Return(FindDatasetSSDExecution4FinishEnd -> FindDatasetSSDCallMessage7ReturnReceivingEnd FindDatasetSSDCallMessage7)
 
-	}
+		Execution::FindDatasetSSDExecution1(FindDatasetService FindDatasetSSDExecution1StartEnd FindDatasetSSDExecution1FinishEnd)
+		Execution::FindDatasetSSDExecution2(FindDatasetService FindDatasetSSDExecution2StartEnd FindDatasetSSDExecution2FinishEnd)
+		Execution::FindDatasetSSDExecution3(FindDatasetService FindDatasetSSDExecution3StartEnd FindDatasetSSDExecution3FinishEnd)
+		Execution::FindDatasetSSDExecution4(FindDatasetService FindDatasetSSDExecution4StartEnd FindDatasetSSDExecution4FinishEnd)
 
-	Service UploadModelService {
+		MessageEnd::FindDatasetSSDCallMessage1SendingEnd(ModelOwner FindDatasetSSDCallMessage1)
+		ExecutionEnd::FindDatasetSSDExecution1StartEnd(FindDatasetService FindDatasetSSDExecution1)
+		ExecutionEnd::FindDatasetSSDExecution1FinishEnd(FindDatasetService FindDatasetSSDExecution1)
+		MessageEnd::FindDatasetSSDCallMessage1ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage1Return)
+		MessageEnd::FindDatasetSSDCallMessage3SendingEnd(ModelOwner FindDatasetSSDCallMessage3)
+		ExecutionEnd::FindDatasetSSDExecution2StartEnd(FindDatasetService FindDatasetSSDExecution2)
+		ExecutionEnd::FindDatasetSSDExecution2FinishEnd(FindDatasetService FindDatasetSSDExecution2)
+		MessageEnd::FindDatasetSSDCallMessage3ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage3Return)
+		MessageEnd::FindDatasetSSDCallMessage5SendingEnd(ModelOwner FindDatasetSSDCallMessage5)
+		ExecutionEnd::FindDatasetSSDExecution3StartEnd(FindDatasetService FindDatasetSSDExecution3)
+		ExecutionEnd::FindDatasetSSDExecution3FinishEnd(FindDatasetService FindDatasetSSDExecution3)
+		MessageEnd::FindDatasetSSDCallMessage5ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage5Return)
+		MessageEnd::FindDatasetSSDCallMessage7SendingEnd(ModelOwner FindDatasetSSDCallMessage7)
+		ExecutionEnd::FindDatasetSSDExecution4StartEnd(FindDatasetService FindDatasetSSDExecution4)
+		ExecutionEnd::FindDatasetSSDExecution4FinishEnd(FindDatasetService FindDatasetSSDExecution4)
+		MessageEnd::FindDatasetSSDCallMessage7ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage7Return)
 
 	}
 
@@ -102,6 +148,40 @@ UseCaseModel DLMMS {
 
 		[Operation]
 		updatePermission(permission)
+
+	}
+
+	Service CallOnlineModelAPIService {
+
+		[Operation]
+		callOnlineModelAsync(modelId, args)
+		awaitCallResult(callId)
+		getCallResult(callId)
+
+	}
+
+	Service FindDatasetService {
+
+		[Operation]
+		selectModel(modelId)
+		selectRule(ruleId)
+		selectDuration(start, end)
+		getDatasetList()
+
+	}
+
+	Service CheckRunningStatusService {
+
+		[Operation]
+		checkModelRunningStatus(modelId)
+
+	}
+
+	Service DLMMSSystem {
+
+	}
+
+	Service ThirdPartyServices {
 
 	}
 
