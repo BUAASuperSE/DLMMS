@@ -15,7 +15,7 @@ UseCaseModel DLMMS {
 	UC::createOnlineModelAPI
 	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
-	UC::callOnlineModelAPI include checkRunningStatus
+	UC::callOnlineModelAPI include checkRunningStatus definedBySSD(CallOnlineModelAPISSD) relatedService(CallOnlineModelAPIService)
 	UC::checkRunningStatus
 	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
 	UC::defineSamplingRule extend findDataSet
@@ -54,15 +54,9 @@ UseCaseModel DLMMS {
 		callOnlineModelAPI
 	}
 
-	Interaction UploadModelSSD {
-
-		[Participants: UploadModelService]
-
-	}
-
 	Interaction ModifyRunningStatusSSD {
 
-		[Participants: ModifyRunningStatusService]
+		[Participants: ModelOwner ModifyRunningStatusService]
 
 	}
 
@@ -70,27 +64,17 @@ UseCaseModel DLMMS {
 
 		[Participants: ModelOwner UpdateModelAccessPermissionService]
 
-		CallMessage::UpdateModelAccessPermissionSSDCallMessage1(updatePermission UpdateModelAccessPermissionSSDCallMessage1SendingEnd -> UpdateModelAccessPermissionSSDExecution1StartEnd)
-		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage1Return(UpdateModelAccessPermissionSSDExecution1FinishEnd -> UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage1)
+	}
 
-		Execution::UpdateModelAccessPermissionSSDExecution1(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1StartEnd UpdateModelAccessPermissionSSDExecution1FinishEnd)
+	Interaction CallOnlineModelAPISSD {
 
-		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1SendingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1)
-		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1StartEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
-		ExecutionEnd::UpdateModelAccessPermissionSSDExecution1FinishEnd(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1)
-		MessageEnd::UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd(ModelOwner UpdateModelAccessPermissionSSDCallMessage1Return)
+		[Participants: ModelUser CallOnlineModelAPIService]
 
 	}
 
-	Service DLMMSSystem {
+	Interaction FindDatasetSSD {
 
-	}
-
-	Service ThirdPartyServices {
-
-	}
-
-	Service UploadModelService {
+		[Participants: ModelOwner CallOnlineModelAPIService]
 
 	}
 
@@ -102,6 +86,22 @@ UseCaseModel DLMMS {
 
 		[Operation]
 		updatePermission(permission)
+
+	}
+
+	Service CallOnlineModelAPIService {
+
+	}
+
+	Service FindDatasetService {
+
+	}
+
+	Service DLMMSSystem {
+
+	}
+
+	Service ThirdPartyServices {
 
 	}
 
