@@ -188,13 +188,7 @@ UseCaseModel DLMMS {
 
 	}
 
-	Service FindDatasetService {
-
-		[Operation]
-		selectModel(modelId)
-		selectRule(ruleId)
-		selectDuration(start, end)
-		getDatasetList()
+	Service ModifyRunningStatusService {
 
 		[Operation]
 		selectModel(modelId)
@@ -203,13 +197,14 @@ UseCaseModel DLMMS {
 
 	}
 
-	Service CheckRunningStatusService {
+	Service UpdateModelAccessPermissionService {
 
 		[Operation]
 		updatePermission(permission)
 		inputModelId(modelId)
 		inputNewAccessPermission(accessPermissionType)
 		cornfirmUpdate()
+
 	}
 
 	Service CallOnlineModelAPIService {
