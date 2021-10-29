@@ -1,4 +1,4 @@
-UseCaseModel Dlmms {
+UseCaseModel DLMMS {
 
 	UC::uploadModel definedBySSD(UploadModelSSD) relatedService(UploadModelService)
 	UC::deleteModel
@@ -9,13 +9,13 @@ UseCaseModel Dlmms {
 	UC::stopOnlineModel extend modifyRunningStatus
 	UC::searchOnlineModel
 	UC::addModelAccessPermission
-	UC::updateModelAccessPermission
+	UC::updateModelAccessPermission definedBySSD(UpdateModelAccessPermissionSSD) relatedService(UpdateModelAccessPermissionService)
 	UC::createModelSharingLink
 	UC::updateModelSharingLinkAccessPermission
 	UC::createOnlineModelAPI
 	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
-	UC::callOnlineModelAPI include checkRunningStatus
+	UC::callOnlineModelAPI include checkRunningStatus definedBySSD(CallOnlineModelAPISSD) relatedService(CallOnlineModelAPIService)
 	UC::checkRunningStatus
 	UC::modifyRunningStatus definedBySSD(ModifyRunningStatusSSD) relatedService(ModifyRunningStatusService)
 	UC::defineSamplingRule extend findDataSet
@@ -54,15 +54,46 @@ UseCaseModel Dlmms {
 		callOnlineModelAPI
 	}
 
-	Interaction UploadModelSSD {
+	Interaction ModifyRunningStatusSSD {
 
-		[Participants: UploadModelService]
+		[Participants: ModelOwner ModifyRunningStatusService]
 
 	}
 
-	Interaction ModifyRunningStatusSSD {
+	Interaction UpdateModelAccessPermissionSSD {
 
-		[Participants: ModifyRunningStatusService]
+		[Participants: ModelOwner UpdateModelAccessPermissionService]
+
+	}
+
+	Interaction CallOnlineModelAPISSD {
+
+		[Participants: ModelUser CallOnlineModelAPIService]
+
+	}
+
+	Interaction FindDatasetSSD {
+
+		[Participants: ModelOwner CallOnlineModelAPIService]
+
+	}
+
+	Service ModifyRunningStatusService {
+
+	}
+
+	Service UpdateModelAccessPermissionService {
+
+		[Operation]
+		updatePermission(permission)
+
+	}
+
+	Service CallOnlineModelAPIService {
+
+	}
+
+	Service FindDatasetService {
 
 	}
 
@@ -74,17 +105,20 @@ UseCaseModel Dlmms {
 
 	}
 
-	Service UploadModelService {
+	Contract UpdateModelAccessPermissionService::updatePermission(permission : String) : Boolean {
 
-	}
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.AccessPermission = permission)
 
-	Service ModifyRunningStatusService {
-
+		precondition:
+			true
+		postcondition:
+			true
 	}
 
 }
 
-DomainModel Dlmms {
+DomainModel DLMMS {
 
 	Entity ModelOwner extends User {
 		OwnModelList : String
@@ -144,3 +178,4 @@ DomainModel Dlmms {
 	}
 
 }
+
