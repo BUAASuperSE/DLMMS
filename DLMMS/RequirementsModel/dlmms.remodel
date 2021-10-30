@@ -99,7 +99,7 @@ UseCaseModel DLMMS {
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage1Return(UpdateModelAccessPermissionSSDExecution1FinishEnd -> UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage1)
 		CallMessage::UpdateModelAccessPermissionSSDCallMessage3(inputNewAccessPermission UpdateModelAccessPermissionSSDCallMessage3SendingEnd -> UpdateModelAccessPermissionSSDExecution2StartEnd)
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage3Return(UpdateModelAccessPermissionSSDExecution2FinishEnd -> UpdateModelAccessPermissionSSDCallMessage3ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage3)
-		CallMessage::UpdateModelAccessPermissionSSDCallMessage5(cornfirmUpdate UpdateModelAccessPermissionSSDCallMessage5SendingEnd -> UpdateModelAccessPermissionSSDExecution3StartEnd)
+		CallMessage::UpdateModelAccessPermissionSSDCallMessage5(confirmUpdate UpdateModelAccessPermissionSSDCallMessage5SendingEnd -> UpdateModelAccessPermissionSSDExecution3StartEnd)
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage5Return(UpdateModelAccessPermissionSSDExecution3FinishEnd -> UpdateModelAccessPermissionSSDCallMessage5ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage5)
 
 		Execution::UpdateModelAccessPermissionSSDExecution1(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1StartEnd UpdateModelAccessPermissionSSDExecution1FinishEnd)
@@ -188,6 +188,36 @@ UseCaseModel DLMMS {
 
 	}
 
+	Interaction UploadModelSSD {
+
+		[Participants: ModelOwner UploadModelService]
+
+		CallMessage::UploadModelSSDCallMessage1(inputModelID UploadModelSSDCallMessage1SendingEnd -> UploadModelSSDExecution1StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage1Return(UploadModelSSDExecution1FinishEnd -> UploadModelSSDCallMessage1ReturnReceivingEnd UploadModelSSDCallMessage1)
+		CallMessage::UploadModelSSDCallMessage3(updateModelContent UploadModelSSDCallMessage3SendingEnd -> UploadModelSSDExecution2StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage3Return(UploadModelSSDExecution2FinishEnd -> UploadModelSSDCallMessage3ReturnReceivingEnd UploadModelSSDCallMessage3)
+		CallMessage::UploadModelSSDCallMessage5(updateModelDescription UploadModelSSDCallMessage5SendingEnd -> UploadModelSSDExecution3StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage5Return(UploadModelSSDExecution3FinishEnd -> UploadModelSSDCallMessage5ReturnReceivingEnd UploadModelSSDCallMessage5)
+
+		Execution::UploadModelSSDExecution1(UploadModelService UploadModelSSDExecution1StartEnd UploadModelSSDExecution1FinishEnd)
+		Execution::UploadModelSSDExecution2(UploadModelService UploadModelSSDExecution2StartEnd UploadModelSSDExecution2FinishEnd)
+		Execution::UploadModelSSDExecution3(UploadModelService UploadModelSSDExecution3StartEnd UploadModelSSDExecution3FinishEnd)
+
+		MessageEnd::UploadModelSSDCallMessage1SendingEnd(ModelOwner UploadModelSSDCallMessage1)
+		ExecutionEnd::UploadModelSSDExecution1StartEnd(UploadModelService UploadModelSSDExecution1)
+		ExecutionEnd::UploadModelSSDExecution1FinishEnd(UploadModelService UploadModelSSDExecution1)
+		MessageEnd::UploadModelSSDCallMessage1ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage1Return)
+		MessageEnd::UploadModelSSDCallMessage3SendingEnd(ModelOwner UploadModelSSDCallMessage3)
+		ExecutionEnd::UploadModelSSDExecution2StartEnd(UploadModelService UploadModelSSDExecution2)
+		ExecutionEnd::UploadModelSSDExecution2FinishEnd(UploadModelService UploadModelSSDExecution2)
+		MessageEnd::UploadModelSSDCallMessage3ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage3Return)
+		MessageEnd::UploadModelSSDCallMessage5SendingEnd(ModelOwner UploadModelSSDCallMessage5)
+		ExecutionEnd::UploadModelSSDExecution3StartEnd(UploadModelService UploadModelSSDExecution3)
+		ExecutionEnd::UploadModelSSDExecution3FinishEnd(UploadModelService UploadModelSSDExecution3)
+		MessageEnd::UploadModelSSDCallMessage5ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage5Return)
+
+	}
+
 	Service ModifyRunningStatusService {
 
 		[Operation]
@@ -200,10 +230,9 @@ UseCaseModel DLMMS {
 	Service UpdateModelAccessPermissionService {
 
 		[Operation]
-		updatePermission(permission)
 		inputModelId(modelId)
 		inputNewAccessPermission(accessPermissionType)
-		cornfirmUpdate()
+		confirmUpdate()
 
 	}
 
@@ -232,6 +261,15 @@ UseCaseModel DLMMS {
 
 	}
 
+	Service UploadModelService {
+
+		[Operation]
+		inputModelID(modelId)
+		updateModelContent(content)
+		updateModelDescription(descripition)
+
+	}
+
 	Service DLMMSSystem {
 
 	}
@@ -240,18 +278,6 @@ UseCaseModel DLMMS {
 
 	}
 
-	Contract UpdateModelAccessPermissionService::updatePermission(permission : String) : Boolean {
-
-		definition:
-			model:Model = Model.allInstance()->any(m:Model | m.AccessPermission = permission)
-
-		precondition:
-			true
-		postcondition:
-			true
-	}
-
-	// 下面是 CallOnlineModel 的相关合约
 	Contract CallOnlineModelAPIService::callOnlineModelAsync(modelId: String, args: String): String {
 
 		definition:
@@ -298,7 +324,6 @@ UseCaseModel DLMMS {
 			result = self.queryCallResult
 	}
 
-	// 下面是 FindDataset 的相关合约
 	Contract FindDatasetService::selectModel(modelId: String): Boolean {
 
 		definition:
@@ -343,6 +368,127 @@ UseCaseModel DLMMS {
 		postcondition:
 			// TODO: fix this method
 			result = self.ModelService.generateDataset
+	}
+
+	Contract UploadModelService::inputModelID(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				result = false
+			endif
+	}
+
+	Contract UploadModelService::updateModelContent(content : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.Content = content and
+			return = true
+	}
+
+	Contract UploadModelService::updateModelDescription(descripition : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.Description = descripition and
+			return = true
+	}
+
+	Contract UpdateModelAccessPermissionService::inputNewAccessPermission(accessPermissionType : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.ModelAccessPermission = accessPermissionType and
+			return = true
+	}
+
+	Contract UpdateModelAccessPermissionService::inputModelId(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				result = false
+			endif
+	}
+
+	Contract UpdateModelAccessPermissionService::confirmUpdate() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.AccessPermission = self.ModelAccessPermission and
+			return = true
+	}
+
+	Contract ModifyRunningStatusService::selectModel(modelId: String): Boolean {
+
+		definition:
+			modelRunningService:ModelRunningService = ModelRunningService.allInstance()->any(mrs:ModelRunningService | mrs.ModelId = modelId)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(modelRunningService.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.ModelRunningService = modelRunningService and
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract ModifyRunningStatusService::inputNewRunningStatus(newStatus : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.ModelRunningService.oclIsUndefined() = false
+		postcondition:
+			self.ModelRuningStatus = newStatus and
+			return = true
+	}
+
+	Contract ModifyRunningStatusService::confirmModify() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.ModelRunningService.oclIsUndefined() = false
+		postcondition:
+			self.ModelRunningService.RuningStatus = self.ModelRuningStatus and
+			return = true
+
 	}
 
 }
