@@ -99,7 +99,7 @@ UseCaseModel DLMMS {
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage1Return(UpdateModelAccessPermissionSSDExecution1FinishEnd -> UpdateModelAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage1)
 		CallMessage::UpdateModelAccessPermissionSSDCallMessage3(inputNewAccessPermission UpdateModelAccessPermissionSSDCallMessage3SendingEnd -> UpdateModelAccessPermissionSSDExecution2StartEnd)
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage3Return(UpdateModelAccessPermissionSSDExecution2FinishEnd -> UpdateModelAccessPermissionSSDCallMessage3ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage3)
-		CallMessage::UpdateModelAccessPermissionSSDCallMessage5(cornfirmUpdate UpdateModelAccessPermissionSSDCallMessage5SendingEnd -> UpdateModelAccessPermissionSSDExecution3StartEnd)
+		CallMessage::UpdateModelAccessPermissionSSDCallMessage5(confirmUpdate UpdateModelAccessPermissionSSDCallMessage5SendingEnd -> UpdateModelAccessPermissionSSDExecution3StartEnd)
 		ReturnMessage::UpdateModelAccessPermissionSSDCallMessage5Return(UpdateModelAccessPermissionSSDExecution3FinishEnd -> UpdateModelAccessPermissionSSDCallMessage5ReturnReceivingEnd UpdateModelAccessPermissionSSDCallMessage5)
 
 		Execution::UpdateModelAccessPermissionSSDExecution1(UpdateModelAccessPermissionService UpdateModelAccessPermissionSSDExecution1StartEnd UpdateModelAccessPermissionSSDExecution1FinishEnd)
@@ -166,15 +166,12 @@ UseCaseModel DLMMS {
 		ReturnMessage::FindDatasetSSDCallMessage1Return(FindDatasetSSDExecution1FinishEnd -> FindDatasetSSDCallMessage1ReturnReceivingEnd FindDatasetSSDCallMessage1)
 		CallMessage::FindDatasetSSDCallMessage3(selectRule FindDatasetSSDCallMessage3SendingEnd -> FindDatasetSSDExecution2StartEnd)
 		ReturnMessage::FindDatasetSSDCallMessage3Return(FindDatasetSSDExecution2FinishEnd -> FindDatasetSSDCallMessage3ReturnReceivingEnd FindDatasetSSDCallMessage3)
-		CallMessage::FindDatasetSSDCallMessage5(selectDuration FindDatasetSSDCallMessage5SendingEnd -> FindDatasetSSDExecution3StartEnd)
+		CallMessage::FindDatasetSSDCallMessage5(getDataset FindDatasetSSDCallMessage5SendingEnd -> FindDatasetSSDExecution3StartEnd)
 		ReturnMessage::FindDatasetSSDCallMessage5Return(FindDatasetSSDExecution3FinishEnd -> FindDatasetSSDCallMessage5ReturnReceivingEnd FindDatasetSSDCallMessage5)
-		CallMessage::FindDatasetSSDCallMessage7(getDatasetList FindDatasetSSDCallMessage7SendingEnd -> FindDatasetSSDExecution4StartEnd)
-		ReturnMessage::FindDatasetSSDCallMessage7Return(FindDatasetSSDExecution4FinishEnd -> FindDatasetSSDCallMessage7ReturnReceivingEnd FindDatasetSSDCallMessage7)
 
 		Execution::FindDatasetSSDExecution1(FindDatasetService FindDatasetSSDExecution1StartEnd FindDatasetSSDExecution1FinishEnd)
 		Execution::FindDatasetSSDExecution2(FindDatasetService FindDatasetSSDExecution2StartEnd FindDatasetSSDExecution2FinishEnd)
 		Execution::FindDatasetSSDExecution3(FindDatasetService FindDatasetSSDExecution3StartEnd FindDatasetSSDExecution3FinishEnd)
-		Execution::FindDatasetSSDExecution4(FindDatasetService FindDatasetSSDExecution4StartEnd FindDatasetSSDExecution4FinishEnd)
 
 		MessageEnd::FindDatasetSSDCallMessage1SendingEnd(ModelOwner FindDatasetSSDCallMessage1)
 		ExecutionEnd::FindDatasetSSDExecution1StartEnd(FindDatasetService FindDatasetSSDExecution1)
@@ -188,10 +185,36 @@ UseCaseModel DLMMS {
 		ExecutionEnd::FindDatasetSSDExecution3StartEnd(FindDatasetService FindDatasetSSDExecution3)
 		ExecutionEnd::FindDatasetSSDExecution3FinishEnd(FindDatasetService FindDatasetSSDExecution3)
 		MessageEnd::FindDatasetSSDCallMessage5ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage5Return)
-		MessageEnd::FindDatasetSSDCallMessage7SendingEnd(ModelOwner FindDatasetSSDCallMessage7)
-		ExecutionEnd::FindDatasetSSDExecution4StartEnd(FindDatasetService FindDatasetSSDExecution4)
-		ExecutionEnd::FindDatasetSSDExecution4FinishEnd(FindDatasetService FindDatasetSSDExecution4)
-		MessageEnd::FindDatasetSSDCallMessage7ReturnReceivingEnd(ModelOwner FindDatasetSSDCallMessage7Return)
+
+	}
+
+	Interaction UploadModelSSD {
+
+		[Participants: ModelOwner UploadModelService]
+
+		CallMessage::UploadModelSSDCallMessage1(inputModelID UploadModelSSDCallMessage1SendingEnd -> UploadModelSSDExecution1StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage1Return(UploadModelSSDExecution1FinishEnd -> UploadModelSSDCallMessage1ReturnReceivingEnd UploadModelSSDCallMessage1)
+		CallMessage::UploadModelSSDCallMessage3(updateModelContent UploadModelSSDCallMessage3SendingEnd -> UploadModelSSDExecution2StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage3Return(UploadModelSSDExecution2FinishEnd -> UploadModelSSDCallMessage3ReturnReceivingEnd UploadModelSSDCallMessage3)
+		CallMessage::UploadModelSSDCallMessage5(updateModelDescription UploadModelSSDCallMessage5SendingEnd -> UploadModelSSDExecution3StartEnd)
+		ReturnMessage::UploadModelSSDCallMessage5Return(UploadModelSSDExecution3FinishEnd -> UploadModelSSDCallMessage5ReturnReceivingEnd UploadModelSSDCallMessage5)
+
+		Execution::UploadModelSSDExecution1(UploadModelService UploadModelSSDExecution1StartEnd UploadModelSSDExecution1FinishEnd)
+		Execution::UploadModelSSDExecution2(UploadModelService UploadModelSSDExecution2StartEnd UploadModelSSDExecution2FinishEnd)
+		Execution::UploadModelSSDExecution3(UploadModelService UploadModelSSDExecution3StartEnd UploadModelSSDExecution3FinishEnd)
+
+		MessageEnd::UploadModelSSDCallMessage1SendingEnd(ModelOwner UploadModelSSDCallMessage1)
+		ExecutionEnd::UploadModelSSDExecution1StartEnd(UploadModelService UploadModelSSDExecution1)
+		ExecutionEnd::UploadModelSSDExecution1FinishEnd(UploadModelService UploadModelSSDExecution1)
+		MessageEnd::UploadModelSSDCallMessage1ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage1Return)
+		MessageEnd::UploadModelSSDCallMessage3SendingEnd(ModelOwner UploadModelSSDCallMessage3)
+		ExecutionEnd::UploadModelSSDExecution2StartEnd(UploadModelService UploadModelSSDExecution2)
+		ExecutionEnd::UploadModelSSDExecution2FinishEnd(UploadModelService UploadModelSSDExecution2)
+		MessageEnd::UploadModelSSDCallMessage3ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage3Return)
+		MessageEnd::UploadModelSSDCallMessage5SendingEnd(ModelOwner UploadModelSSDCallMessage5)
+		ExecutionEnd::UploadModelSSDExecution3StartEnd(UploadModelService UploadModelSSDExecution3)
+		ExecutionEnd::UploadModelSSDExecution3FinishEnd(UploadModelService UploadModelSSDExecution3)
+		MessageEnd::UploadModelSSDCallMessage5ReturnReceivingEnd(ModelOwner UploadModelSSDCallMessage5Return)
 
 	}
 
@@ -208,15 +231,20 @@ UseCaseModel DLMMS {
 		inputNewRunningStatus(newStatus)
 		confirmModify()
 
+		[Operation]
+		selectModel(modelId)
+		inputNewRunningStatus(newStatus)
+		confirmModify()
+
 	}
 
 	Service CheckRunningStatusService {
 
 		[Operation]
-		updatePermission(permission)
 		inputModelId(modelId)
 		inputNewAccessPermission(accessPermissionType)
-		cornfirmUpdate()
+		confirmUpdate()
+
 	}
 
 	Service CallOnlineModelAPIService {
@@ -233,8 +261,7 @@ UseCaseModel DLMMS {
 		[Operation]
 		selectModel(modelId)
 		selectRule(ruleId)
-		selectDuration(start, end)
-		getDatasetList()
+		getDataset(start, end)
 
 	}
 
@@ -242,6 +269,15 @@ UseCaseModel DLMMS {
 
 		[Operation]
 		checkModelRunningStatus(modelId)
+
+	}
+
+	Service UploadModelService {
+
+		[Operation]
+		inputModelID(modelId)
+		updateModelContent(content)
+		updateModelDescription(descripition)
 
 	}
 
@@ -253,15 +289,217 @@ UseCaseModel DLMMS {
 
 	}
 
-	Contract UpdateModelAccessPermissionService::updatePermission(permission : String) : Boolean {
+	Contract CallOnlineModelAPIService::callOnlineModelAsync(modelId: String, args: String): String {
 
 		definition:
-			model:Model = Model.allInstance()->any(m:Model | m.AccessPermission = permission)
+			model:Model = Model.allInstance()->any(m:Model | m.ModelId = modelId)
 
 		precondition:
 			true
 		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				// TODO: how to call the method of another service
+				self.ModelService = CheckRunningStatusService.checkModelRunningStatus and
+				self.Args = args and
+				result = self.generateCallId
+			else
+				result = ""
+			endif
+	}
+
+	Contract CheckRunningStatusService::checkModelRunningStatus(modelId: String): ModelRunningService {
+
+		definition:
+			modelService:ModelRunningService = ModelRunningService.allInstance()->any(s:ModelRunningService | s.ModelId = modelId)
+
+		precondition:
 			true
+
+		postcondition:
+			if
+				(modelService.oclIsUndefined() = false)
+			then
+				result = modelService
+			else
+				result = null
+			endif
+	}
+
+	Contract CallOnlineModelAPIService::getCallResult(callId: String): String {
+
+		precondition:
+			self.checkCallId = true
+		postcondition:
+			result = self.queryCallResult
+	}
+
+	Contract FindDatasetService::selectModel(modelId: String): Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.ModelId = modelId)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract FindDatasetService::selectRule(ruleId: String): Boolean {
+
+		definition:
+			modelService:ModelRunningService = ModelRunningService.allInstance()->any(s:ModelRunningService | s.ModelId = self.Model.ModelId and s.SamplingRuleId=ruleId)
+
+		precondition:
+			self.Model.oclIsUndefined() = false
+
+		postcondition:
+			if
+				(modelService.oclIsUndefined() = false)
+			then
+				self.ModelService = modelService and
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract FindDatasetService::getDataset(start: Date, end: Date): DataSet {
+
+		precondition:
+			end > start
+		postcondition:
+			// TODO: fix this method
+			result = self.ModelService.generateDataset
+	}
+
+	Contract UploadModelService::inputModelID(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				result = false
+			endif
+	}
+
+	Contract UploadModelService::updateModelContent(content : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.Content = content and
+			return = true
+	}
+
+	Contract UploadModelService::updateModelDescription(descripition : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.Description = descripition and
+			return = true
+	}
+
+	Contract UpdateModelAccessPermissionService::inputNewAccessPermission(accessPermissionType : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.ModelAccessPermission = accessPermissionType and
+			return = true
+	}
+
+	Contract UpdateModelAccessPermissionService::inputModelId(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				result = false
+			endif
+	}
+
+	Contract UpdateModelAccessPermissionService::confirmUpdate() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.AccessPermission = self.ModelAccessPermission and
+			return = true
+	}
+
+	Contract ModifyRunningStatusService::selectModel(modelId: String): Boolean {
+
+		definition:
+			modelRunningService:ModelRunningService = ModelRunningService.allInstance()->any(mrs:ModelRunningService | mrs.ModelId = modelId)
+
+		precondition:
+			true
+
+		postcondition:
+			if
+				(modelRunningService.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.ModelRunningService = modelRunningService and
+				result = true
+			else
+				result = false
+			endif
+	}
+
+	Contract ModifyRunningStatusService::inputNewRunningStatus(newStatus : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.ModelRunningService.oclIsUndefined() = false
+		postcondition:
+			self.ModelRuningStatus = newStatus and
+			return = true
+	}
+
+	Contract ModifyRunningStatusService::confirmModify() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.ModelRunningService.oclIsUndefined() = false
+		postcondition:
+			self.ModelRunningService.RuningStatus = self.ModelRuningStatus and
+			return = true
+
 	}
 
 }
@@ -279,7 +517,8 @@ DomainModel DLMMS {
 		RuningStatus : String
 		ServiceId : String
 		ServiceRunningTime : String
-		SamplingRules : String
+		SamplingRuleId : String
+		ModelId : String
 
 		[Refer]
 		ModelRunningServicetoDataSet : DataSet Association
@@ -307,6 +546,7 @@ DomainModel DLMMS {
 		AccessLinkState : String
 		ModelDescription : String
 		ModelContent : String
+		ModelId : String
 
 		[Refer]
 		ModeltoModelManager : ModelManager Association
