@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_oEV1UD10Eey4TNs05SGtZQ" selectedViews="_oJmIwD10Eey4TNs05SGtZQ" version="14.3.1.202003261200">
+    <semanticResources>personnel.ecore</semanticResources>
+    <semanticResources>personnel.genmodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_oJmIwD10Eey4TNs05SGtZQ">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_oKh84D10Eey4TNs05SGtZQ" name="personnel" repPath="#_oKcdUD10Eey4TNs05SGtZQ" changeId="25777052-f3bc-4082-8193-9a9cd14252f4">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="personnel.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_oKcdUD10Eey4TNs05SGtZQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_oKh84T10Eey4TNs05SGtZQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_oKh84j10Eey4TNs05SGtZQ" type="Sirius" element="_oKcdUD10Eey4TNs05SGtZQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_JARq4D11Eey4TNs05SGtZQ" type="2003" element="_JANZcD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_JASR8D11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_JASR8T11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_z0p6UD13Eey4TNs05SGtZQ" type="3010" element="_z0fiQD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_z0p6UT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_z0p6Uj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-7dPoD13Eey4TNs05SGtZQ" type="3010" element="_-6_VkT13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_-7dPoT13Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_-7dPoj13Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_JASR8j11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_JASR8z11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_JARq4T11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JARq4j11Eey4TNs05SGtZQ" x="474" y="54" width="177" height="81"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_dY3UoD11Eey4TNs05SGtZQ" type="2003" element="_dYzDMD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_dY37sD11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_dY37sT11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_ll-1ID13Eey4TNs05SGtZQ" type="3010" element="_llqsED13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_ll-1IT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_ll-1Ij13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_SKRN4D14Eey4TNs05SGtZQ" type="3010" element="_SJpi0T14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_SKRN4T14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_SKRN4j14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_dY37sj11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_dY37sz11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_dY3UoT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dY3Uoj11Eey4TNs05SGtZQ" x="138" y="204" width="177" height="81"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_fMVdYD11Eey4TNs05SGtZQ" type="2003" element="_fMSaED11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_fMVdYz11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_fMVdZD11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_rMt0ID13Eey4TNs05SGtZQ" type="3010" element="_rMmfYD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_rMt0IT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_rMt0Ij13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_MkOycD14Eey4TNs05SGtZQ" type="3010" element="_MkDMQj14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_MkOycT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_MkOycj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_fMVdZT11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_fMVdZj11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_fMVdYT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fMVdYj11Eey4TNs05SGtZQ" x="138" y="318" width="177" height="87"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_jcYWQD11Eey4TNs05SGtZQ" type="2003" element="_jcUr4D11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_jcY9UD11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_jcY9UT11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_wq8-cD13Eey4TNs05SGtZQ" type="3010" element="_wqymYD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_wq8-cT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_wq8-cj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PaLE0D14Eey4TNs05SGtZQ" type="3010" element="_PaAsyj14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_PaLE0T14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_PaLE0j14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_jcY9Uj11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_jcY9Uz11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_jcYWQT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jcYWQj11Eey4TNs05SGtZQ" x="-60" y="318" width="177" height="87"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_mdnSoD11Eey4TNs05SGtZQ" type="2003" element="_mdiaID11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_mdnSoz11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_mdn5sD11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_uN8wgD13Eey4TNs05SGtZQ" type="3010" element="_uNig0D13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_uN8wgT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_uN8wgj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DUwLID14Eey4TNs05SGtZQ" type="3010" element="_DUXwoT14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_DUwLIT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_DUwLIj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_mdn5sT11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_mdn5sj11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_mdnSoT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mdnSoj11Eey4TNs05SGtZQ" x="336" y="318" width="177" height="87"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tLTSoD11Eey4TNs05SGtZQ" type="2003" element="_tLKIsD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_tLTSoz11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_tLT5sD11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_gLcfED13Eey4TNs05SGtZQ" type="3010" element="_gLLZUD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_gLcfET13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_gLcfEj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_HV_zAD14Eey4TNs05SGtZQ" type="3010" element="_HVomoT14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_HV_zAT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_HV_zAj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_tLT5sT11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_tLT5sj11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tLTSoT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tLTSoj11Eey4TNs05SGtZQ" x="408" y="204" width="183" height="81"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_wdJd4D11Eey4TNs05SGtZQ" type="2003" element="_wc7bcD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_wdKsAD11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_wdKsAT11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_drS2gD13Eey4TNs05SGtZQ" type="3010" element="_dq3_wD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_drS2gT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_drS2gj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_K1IzYD14Eey4TNs05SGtZQ" type="3010" element="_K0n2AT14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_K1IzYT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_K1IzYj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_wdKsAj11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_wdKsAz11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_wdJd4T11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wdJd4j11Eey4TNs05SGtZQ" x="564" y="319" width="189" height="86"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_8t4PsD11Eey4TNs05SGtZQ" type="2003" element="_8tz-QD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_8t42wD11Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_8t42wT11Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_a0bXED13Eey4TNs05SGtZQ" type="3010" element="_a0HOAD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_a0bXET13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_a0b-ID13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_Be75AD14Eey4TNs05SGtZQ" type="3010" element="_BeemAD14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Be75AT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Be75Aj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_8t42wj11Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_8t42wz11Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_8t4PsT11Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8t4Psj11Eey4TNs05SGtZQ" x="660" y="204" width="177" height="81"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_C-q4UD12Eey4TNs05SGtZQ" type="2003" element="_C-nN8D12Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_C-rfYD12Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_C-rfYT12Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_U7TAgD13Eey4TNs05SGtZQ" type="3010" element="_U7IocD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_U7TAgT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_U7TAgj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_AC-RUD14Eey4TNs05SGtZQ" type="3010" element="_AC0gVz14Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_AC-RUT14Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_AC-RUj14Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_C-rfYj12Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_C-rfYz12Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_C-q4UT12Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C-q4Uj12Eey4TNs05SGtZQ" x="882" y="205" width="177" height="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Is7boD12Eey4TNs05SGtZQ" type="2003" element="_Is0t8D12Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_Is8CsD12Eey4TNs05SGtZQ" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_Is8CsT12Eey4TNs05SGtZQ" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_Nm_scD13Eey4TNs05SGtZQ" type="3010" element="_NmogED13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Nm_scT13Eey4TNs05SGtZQ" fontColor="2697711" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Nm_scj13Eey4TNs05SGtZQ"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_9hnH0D13Eey4TNs05SGtZQ" type="3010" element="_34jNkD13Eey4TNs05SGtZQ">
+              <styles xmi:type="notation:FontStyle" xmi:id="_9hnH0T13Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_9hnH0j13Eey4TNs05SGtZQ"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_Is8Csj12Eey4TNs05SGtZQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_Is8Csz12Eey4TNs05SGtZQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Is7boT12Eey4TNs05SGtZQ" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Is7boj12Eey4TNs05SGtZQ" x="1104" y="204" width="177" height="81"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_oKh84z10Eey4TNs05SGtZQ"/>
+        <edges xmi:type="notation:Edge" xmi:id="_KzrFsD12Eey4TNs05SGtZQ" type="4001" element="_Kzb1ID12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_Is7boD12Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_KzrswD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KzrswT12Eey4TNs05SGtZQ" x="156" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Kzrswj12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Kzrswz12Eey4TNs05SGtZQ" x="-53" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_KzsT0D12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KzsT0T12Eey4TNs05SGtZQ" x="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_KzrFsT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_KzrFsj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KzrFsz12Eey4TNs05SGtZQ" points="[27, 0, -455, -148]$[540, 0, 58, -148]$[540, 114, 58, -34]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Kzs64D12Eey4TNs05SGtZQ" id="(0.8457142857142858,0.45569620253164556)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Kzs64T12Eey4TNs05SGtZQ" id="(0.0,0.43037974683544306)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XzZrgD12Eey4TNs05SGtZQ" type="4001" element="_XzEUUD12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_C-q4UD12Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_XzaSkD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XzaSkT12Eey4TNs05SGtZQ" x="12" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XzaSkj12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XzaSkz12Eey4TNs05SGtZQ" x="3" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Xza5oD12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xza5oT12Eey4TNs05SGtZQ" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XzZrgT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XzZrgj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XzZrgz12Eey4TNs05SGtZQ" points="[27, 0, -316, -85]$[343, 0, 0, -85]$[343, 85, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XzbgsD12Eey4TNs05SGtZQ" id="(0.8457142857142858,0.8354430379746836)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XzbgsT12Eey4TNs05SGtZQ" id="(0.4742857142857143,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Y56noD12Eey4TNs05SGtZQ" type="4001" element="_Y5yEzD12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_8t4PsD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_Y57OsD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y57OsT12Eey4TNs05SGtZQ" x="2" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Y57Osj12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y57Osz12Eey4TNs05SGtZQ" x="24" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Y571wD12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Y571wT12Eey4TNs05SGtZQ" x="-21" y="6"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y56noT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Y56noj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y56noz12Eey4TNs05SGtZQ" points="[20, 19, -102, -71]$[20, 42, -102, -48]$[122, 42, 0, -48]$[122, 90, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y571wj12Eey4TNs05SGtZQ" id="(0.8457142857142858,0.759493670886076)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Y571wz12Eey4TNs05SGtZQ" id="(0.48,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_bTWkMD12Eey4TNs05SGtZQ" type="4001" element="_bTREoz12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_wdJd4D11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_bTXLQD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bTXLQT12Eey4TNs05SGtZQ" x="78" y="-34"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bTXLQj12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bTXLQz12Eey4TNs05SGtZQ" x="-11" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_bTXLRD12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bTXLRT12Eey4TNs05SGtZQ" x="-103" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_bTWkMT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_bTWkMj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bTWkMz12Eey4TNs05SGtZQ" points="[36, 0, 21, -186]$[36, 186, 21, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bTXLRj12Eey4TNs05SGtZQ" id="(0.6171428571428571,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bTXLRz12Eey4TNs05SGtZQ" id="(0.17647058823529413,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_fskAID12Eey4TNs05SGtZQ" type="4001" element="_fsNa0D12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_tLTSoD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_fsknMD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fsknMT12Eey4TNs05SGtZQ" x="3" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fslOQD12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fslOQT12Eey4TNs05SGtZQ" x="1" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_fslOQj12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fslOQz12Eey4TNs05SGtZQ" x="-1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_fskAIT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_fskAIj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fskAIz12Eey4TNs05SGtZQ" points="[0, 0, 84, -71]$[0, 35, 84, -36]$[-84, 35, 0, -36]$[-84, 71, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fsl1UD12Eey4TNs05SGtZQ" id="(0.37714285714285717,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fsl1UT12Eey4TNs05SGtZQ" id="(0.2651933701657459,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_gS6OcD12Eey4TNs05SGtZQ" type="4001" element="_gSbtVj12Eey4TNs05SGtZQ" source="_JARq4D11Eey4TNs05SGtZQ" target="_dY3UoD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_gS61gD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gS61gT12Eey4TNs05SGtZQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_gS7ckD12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gS7ckT12Eey4TNs05SGtZQ" x="-2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_gS7ckj12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gS7ckz12Eey4TNs05SGtZQ" x="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_gS6OcT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_gS6Ocj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_gS6Ocz12Eey4TNs05SGtZQ" points="[0, 0, 206, -143]$[-264, 0, -58, -143]$[-264, 101, -58, -42]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gS8DoD12Eey4TNs05SGtZQ" id="(0.17142857142857143,0.620253164556962)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gS8DoT12Eey4TNs05SGtZQ" id="(0.9142857142857143,0.5316455696202531)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_hO5VkD12Eey4TNs05SGtZQ" type="4001" element="_hOoP0D12Eey4TNs05SGtZQ" source="_dY3UoD11Eey4TNs05SGtZQ" target="_mdnSoD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_hO58oD12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hO58oT12Eey4TNs05SGtZQ" x="-28" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hO58oj12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hO58oz12Eey4TNs05SGtZQ" x="5" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_hO6jsD12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hO6jsT12Eey4TNs05SGtZQ" x="-5" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_hO5VkT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_hO5Vkj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_hO5Vkz12Eey4TNs05SGtZQ" points="[0, 0, -104, -83]$[74, 0, -30, -83]$[74, 83, -30, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hO6jsj12Eey4TNs05SGtZQ" id="(0.9142857142857143,0.3924050632911392)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hO6jsz12Eey4TNs05SGtZQ" id="(0.37714285714285717,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_iA4zMD12Eey4TNs05SGtZQ" type="4001" element="_iAlRNj12Eey4TNs05SGtZQ" source="_dY3UoD11Eey4TNs05SGtZQ" target="_fMVdYD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_iA4zND12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iA4zNT12Eey4TNs05SGtZQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iA5aQD12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iA5aQT12Eey4TNs05SGtZQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_iA5aQj12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iA5aQz12Eey4TNs05SGtZQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_iA4zMT12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_iA4zMj12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iA4zMz12Eey4TNs05SGtZQ" points="[-12, 0, 0, -53]$[-12, 53, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iA6BUD12Eey4TNs05SGtZQ" id="(0.5771428571428572,0.7721518987341772)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_iA6BUT12Eey4TNs05SGtZQ" id="(0.5085714285714286,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ioha8D12Eey4TNs05SGtZQ" type="4001" element="_ioY4Ij12Eey4TNs05SGtZQ" source="_dY3UoD11Eey4TNs05SGtZQ" target="_jcYWQD11Eey4TNs05SGtZQ">
+          <children xmi:type="notation:Node" xmi:id="_ioha9D12Eey4TNs05SGtZQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioha9T12Eey4TNs05SGtZQ" x="-32" y="15"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ioha9j12Eey4TNs05SGtZQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioha9z12Eey4TNs05SGtZQ" x="-2" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ioha-D12Eey4TNs05SGtZQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ioha-T12Eey4TNs05SGtZQ" x="1" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ioha8T12Eey4TNs05SGtZQ" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ioha8j12Eey4TNs05SGtZQ" fontColor="7490599" fontName="Microsoft YaHei UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ioha8z12Eey4TNs05SGtZQ" points="[-42, 6, 156, -84]$[-152, 6, 46, -84]$[-152, 90, 46, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ioha-j12Eey4TNs05SGtZQ" id="(0.24,0.3037974683544304)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ioiCAD12Eey4TNs05SGtZQ" id="(0.24,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_oKwmYD10Eey4TNs05SGtZQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_oKwmYT10Eey4TNs05SGtZQ">
+        <computedStyleDescriptions xmi:type="style:FlatContainerStyleDescription" xmi:id="_icIaMj11Eey4TNs05SGtZQ" arcWidth="8" arcHeight="8" borderSizeComputationExpression="1" tooltipExpression="service:renderTooltip" roundedCorner="true" widthComputationExpression="12" heightComputationExpression="10" backgroundStyle="Liquid">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <backgroundColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          <foregroundColor xmi:type="description:UserFixedColor" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@userColorsPalettes[name='Ecore%20Palette']/@entries[name='EClass']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_bTREpT12Eey4TNs05SGtZQ" showIcon="false" labelExpression="service:render">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_bTREpj12Eey4TNs05SGtZQ" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_evjlUD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_evjlUT12Eey4TNs05SGtZQ" showIcon="false" labelExpression="service:render">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_evjlUj12Eey4TNs05SGtZQ" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_NmpHID13Eey4TNs05SGtZQ" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+        </computedStyleDescriptions>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_JANZcD11Eey4TNs05SGtZQ" name="Personnel" tooltipText="&#xA;ERROR : The name 'legal affairs' is not well formed&#xA;ERROR : The name 'r&amp;d' is not well formed&#xA;ERROR : The attribute 'Personnel.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " outgoingEdges="_Kzb1ID12Eey4TNs05SGtZQ _XzEUUD12Eey4TNs05SGtZQ _Y5yEzD12Eey4TNs05SGtZQ _bTREoz12Eey4TNs05SGtZQ _fsNa0D12Eey4TNs05SGtZQ _gSbtVj12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Personnel"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Personnel"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_XzPTcT12Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_z0fiQD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Personnel.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Personnel/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Personnel/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_z0gJUD13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_-6_VkT13Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Personnel/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Personnel/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_-7AjsD13Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_dYzDMD11Eey4TNs05SGtZQ" name="R&amp;D" tooltipText="&#xA;ERROR : The name 'R&amp;D' is not well formed&#xA;ERROR : The attribute 'R&amp;D.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " outgoingEdges="_hOoP0D12Eey4TNs05SGtZQ _iAlRNj12Eey4TNs05SGtZQ _ioY4Ij12Eey4TNs05SGtZQ" incomingEdges="_gSbtVj12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//R%26D"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//R%26D"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_icJBQT11Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_llqsED13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'R&amp;D.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//R%26D/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//R%26D/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_llrTID13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_SJpi0T14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//R%26D/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//R%26D/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_SJqJ4D14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_fMSaED11Eey4TNs05SGtZQ" name="Development" tooltipText="&#xA;ERROR : The attribute 'Development.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_iAlRNj12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Development"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Development"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_rMpisz13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_rMmfYD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Development.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Development/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Development/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_rMmfYT13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_MkDMQj14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Development/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Development/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_MkDMQz14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_jcUr4D11Eey4TNs05SGtZQ" name="Research" tooltipText="&#xA;ERROR : The attribute 'Research.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_ioY4Ij12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Research"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Research"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_wq2Qxz13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_wqymYD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Research.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Research/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Research/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_wqymYT13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_PaAsyj14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Research/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Research/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_PaBT0D14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_mdiaID11Eey4TNs05SGtZQ" name="PM" tooltipText="&#xA;ERROR : The attribute 'PM.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_hOoP0D12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//PM"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//PM"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_uNs44T13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_uNig0D13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'PM.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//PM/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//PM/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_uNjH4D13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_DUXwoT14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//PM/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//PM/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_DUYXsD14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tLKIsD11Eey4TNs05SGtZQ" name="Market" tooltipText="&#xA;ERROR : The attribute 'Market.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_fsNa0D12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Market"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Market"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_gLRf8T13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_gLLZUD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Market.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Market/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Market/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_gLMAYD13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_HVomoT14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Market/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Market/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_HVpNsD14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_wc7bcD11Eey4TNs05SGtZQ" name="HR" tooltipText="&#xA;ERROR : The attribute 'HR.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_bTREoz12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//HR"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//HR"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_dq_Uhz13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_dq3_wD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'HR.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//HR/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//HR/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_dq5N4D13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_K0n2AT14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//HR/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//HR/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_K0odED14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8tz-QD11Eey4TNs05SGtZQ" name="Finance" tooltipText="&#xA;ERROR : The instance type name '' is not well formed&#xA;ERROR : Expecting an identifier at index 0&#xA;ERROR : The attribute 'Finance.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_Y5yEzD12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Finance"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Finance"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_aZH7IT13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_a0HOAD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Finance.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Finance/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Finance/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_a0H1ED13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_BeemAD14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Finance/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Finance/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_BefNED14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_C-nN8D12Eey4TNs05SGtZQ" name="Legal Affairs" tooltipText="&#xA;ERROR : The name 'Legal Affairs' is not well formed&#xA;ERROR : The attribute 'Legal Affairs.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_XzEUUD12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Legal%20Affairs"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Legal%20Affairs"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_ECfFxj12Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_U7IocD13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Legal Affairs.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Legal%20Affairs/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Legal%20Affairs/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_U7JPgD13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_AC0gVz14Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Legal%20Affairs/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Legal%20Affairs/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_AC1HYD14Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_Is0t8D12Eey4TNs05SGtZQ" name="Administration" tooltipText="&#xA;ERROR : The attribute 'Administration.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier " incomingEdges="_Kzb1ID12Eey4TNs05SGtZQ" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="personnel.ecore#//Administration"/>
+      <semanticElements xmi:type="ecore:EClass" href="personnel.ecore#//Administration"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_Nm4-xz13Eey4TNs05SGtZQ" labelColor="239,41,41" description="_icIaMj11Eey4TNs05SGtZQ" borderSize="1" borderSizeComputationExpression="1" borderColor="239,41,41" backgroundStyle="Liquid" foregroundColor="255,252,216"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_NmogED13Eey4TNs05SGtZQ" name="members : EEList" tooltipText="&#xA;ERROR : The attribute 'Administration.members' is not transient so it must have a data type that is serializable&#xA;WARNING : The generic type associated with the 'EEList' classifier should have 1 type argument(s) to match the number of type parameter(s) of the classifier ">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Administration/members"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Administration/members"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_NmzfMD13Eey4TNs05SGtZQ" labelColor="239,41,41" labelAlignment="LEFT" description="_NmpHID13Eey4TNs05SGtZQ" borderColor="239,41,41"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_34jNkD13Eey4TNs05SGtZQ" name="budget : Double = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="personnel.ecore#//Administration/budget"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="personnel.ecore#//Administration/budget"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_7L_7Uz13Eey4TNs05SGtZQ" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Kzb1ID12Eey4TNs05SGtZQ" name="[0..*] administration" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_Is0t8D12Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/administration"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/administration"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fPg3wD12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fPg3wj12Eey4TNs05SGtZQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_fPg3wT12Eey4TNs05SGtZQ" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XzEUUD12Eey4TNs05SGtZQ" name="[0..*] legal affairs" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_C-nN8D12Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/legal%20affairs"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/legal%20affairs"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_evjlUz12Eey4TNs05SGtZQ" description="_evjlUD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="239,41,41">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_evjlVT12Eey4TNs05SGtZQ" showIcon="false" labelColor="239,41,41"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_evjlVD12Eey4TNs05SGtZQ" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Y5yEzD12Eey4TNs05SGtZQ" name="[0..*] finance" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_8tz-QD11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/finance"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/finance"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eJyl3D12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_eJyl3j12Eey4TNs05SGtZQ" showIcon="false"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_eJyl3T12Eey4TNs05SGtZQ" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_bTREoz12Eey4TNs05SGtZQ" name="[0..*] hr" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_wc7bcD11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/hr"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/hr"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_bTREpz12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_bTREqT12Eey4TNs05SGtZQ" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_bTREqD12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_fsNa0D12Eey4TNs05SGtZQ" name="[0..*] market" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_tLKIsD11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/market"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/market"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_fsOB4D12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_fsOB4j12Eey4TNs05SGtZQ" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_fsOB4T12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_gSbtVj12Eey4TNs05SGtZQ" name="[0..*] r&amp;d" sourceNode="_JANZcD11Eey4TNs05SGtZQ" targetNode="_dYzDMD11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/r%26d"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//Personnel/r%26d"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_gScUYD12Eey4TNs05SGtZQ" description="_evjlUD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="239,41,41">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_gScUYj12Eey4TNs05SGtZQ" showIcon="false" labelColor="239,41,41">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_gScUYT12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_hOoP0D12Eey4TNs05SGtZQ" name="[0..*] pm" sourceNode="_dYzDMD11Eey4TNs05SGtZQ" targetNode="_mdiaID11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/pm"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/pm"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_hOpd8D12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_hOpd8j12Eey4TNs05SGtZQ" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_hOpd8T12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_iAlRNj12Eey4TNs05SGtZQ" name="[0..*] development" sourceNode="_dYzDMD11Eey4TNs05SGtZQ" targetNode="_fMSaED11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/development"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/development"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_iAmfUD12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_iAmfUj12Eey4TNs05SGtZQ" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_iAmfUT12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ioY4Ij12Eey4TNs05SGtZQ" name="[0..*] research" sourceNode="_dYzDMD11Eey4TNs05SGtZQ" targetNode="_jcUr4D11Eey4TNs05SGtZQ">
+      <target xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/research"/>
+      <semanticElements xmi:type="ecore:EReference" href="personnel.ecore#//R%26D/research"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ioZfID12Eey4TNs05SGtZQ" description="_bTREpD12Eey4TNs05SGtZQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ioZfIj12Eey4TNs05SGtZQ" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_ioZfIT12Eey4TNs05SGtZQ" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_oKfgoD10Eey4TNs05SGtZQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <target xmi:type="ecore:EPackage" href="personnel.ecore#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

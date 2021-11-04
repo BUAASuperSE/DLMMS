@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.dlmms.personnel/src-gen" creationIcons="false"
+    editDirectory="/org.dlmms.personnel.edit/src-gen" editorDirectory="/org.dlmms.personnel.editor/src-gen"
+    modelPluginID="org.dlmms.personnel" modelName="Personnel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>personnel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Personnel" basePackage="org.dlmms" disposableProviderFactory="true"
+      ecorePackage="personnel.ecore#/">
+    <genClasses ecoreClass="personnel.ecore#//Personnel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/administration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/legal%20affairs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/finance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/hr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/market"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//Personnel/r%26d"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Personnel/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Personnel/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//R%26D">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//R%26D/pm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//R%26D/development"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference personnel.ecore#//R%26D/research"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//R%26D/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//R%26D/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Development">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Development/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Development/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Research">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Research/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Research/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//PM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//PM/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//PM/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Market">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Market/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Market/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//HR">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//HR/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//HR/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Finance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Finance/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Finance/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Legal%20Affairs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Legal%20Affairs/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Legal%20Affairs/budget"/>
+    </genClasses>
+    <genClasses ecoreClass="personnel.ecore#//Administration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Administration/members"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute personnel.ecore#//Administration/budget"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
