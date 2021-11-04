@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="bpmn" nsURI="http://www.example.org/bpmn" nsPrefix="bpmn">
+  <eClassifiers xsi:type="ecore:EClass" name="Pool" eSuperTypes="#//Swimlane">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lane" lowerBound="1" upperBound="-1"
+        eType="#//Lane" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lane" eSuperTypes="#//Swimlane"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Start" eSuperTypes="#//Event"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Gateway"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Intermediate" eSuperTypes="#//Event"/>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//Event"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Fork" eSuperTypes="#//Gateway"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Join" eSuperTypes="#//Gateway"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Decide" eSuperTypes="#//Gateway">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DecideExpression" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Task" eSuperTypes="#//Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubProcess" eSuperTypes="#//Activity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SequenceFlow" eSuperTypes="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MessageFlow" eSuperTypes="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataAssociation" eSuperTypes="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//FlowObject"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Conversation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="communication" lowerBound="1"
+        upperBound="-1" eType="#//Communication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversationlink" lowerBound="1"
+        upperBound="-1" eType="#//ConversationLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="conversation" lowerBound="1"
+        upperBound="-1" eType="#//Conversation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pool" lowerBound="1" upperBound="-1"
+        eType="#//Pool" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Communication"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConversationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkedConversationLink" eSuperTypes="#//ConversationLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Doocumentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Group" eSuperTypes="#//Doocumentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextAnnotation" eSuperTypes="#//Doocumentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Output" eSuperTypes="#//Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Object" eSuperTypes="#//Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Collection" eSuperTypes="#//Data">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" upperBound="-1"
+        eType="#//Object" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Message" eSuperTypes="#//Data"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Process">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doocumentation" lowerBound="1"
+        upperBound="-1" eType="#//Doocumentation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" upperBound="-1"
+        eType="#//Data" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flowobject" lowerBound="1"
+        upperBound="-1" eType="#//FlowObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="event" lowerBound="1" upperBound="-1"
+        eType="#//Event" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gateway" lowerBound="1"
+        upperBound="-1" eType="#//Gateway" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="activity" lowerBound="1"
+        upperBound="-1" eType="#//Activity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swimlane" lowerBound="1"
+        upperBound="-1" eType="#//Swimlane" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Swimlane"/>
+</ecore:EPackage>
