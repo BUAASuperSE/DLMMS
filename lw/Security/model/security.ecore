@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="security" nsURI="http://www.example.org/security" nsPrefix="security">
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityCategory" eSuperTypes="#//MeasurementSet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        upperBound="-1" eType="#//SecurityMeasurement" eOpposite="#//SecurityMeasurement/set"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityMeasurement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="set" eType="#//SecurityCategory"
+        eOpposite="#//SecurityCategory/property"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityIntegrity" eSuperTypes="#//SecurityMeasurement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityClassification" eSuperTypes="#//SecurityMeasurement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityAvailability" eSuperTypes="#//SecurityMeasurement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Measurement" eSuperTypes="#//SecurityMeasurement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
+        upperBound="-1" eType="#//PropertySet" eOpposite="#//PropertySet/set"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MeasurementSet" eSuperTypes="#//PropertySet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertySet">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="set" eType="#//Measurement"
+        eOpposite="#//Measurement/property"/>
+  </eClassifiers>
+</ecore:EPackage>
