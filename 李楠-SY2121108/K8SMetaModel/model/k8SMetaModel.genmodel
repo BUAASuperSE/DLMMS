@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/K8SMetaModel/src-gen" creationIcons="false" editDirectory="/K8SMetaModel.edit/src-gen"
+    editorDirectory="/K8SMetaModel.editor/src-gen" modelPluginID="K8SMetaModel" modelName="K8SMetaModel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>k8SMetaModel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="K8SMetaModel" disposableProviderFactory="true" ecorePackage="k8SMetaModel.ecore#/">
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Pod"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//StatefulSet"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//ReplicaSet"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Deployment"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Job"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//NonMaster"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Service"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Kubelet"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//KubeProxy"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Node"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Master"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Cluster"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//ControlPlane"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//ControllerManager"/>
+    <genClasses ecoreClass="k8SMetaModel.ecore#//Scheduler"/>
+  </genPackages>
+</genmodel:GenModel>

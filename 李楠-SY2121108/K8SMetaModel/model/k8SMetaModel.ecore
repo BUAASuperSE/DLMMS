@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="k8SMetaModel" nsURI="http://www.example.org/k8SMetaModel" nsPrefix="k8SMetaModel">
+  <eClassifiers xsi:type="ecore:EClass" name="Pod"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StatefulSet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReplicaSet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Deployment"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Job"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NonMaster"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Service"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Kubelet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="KubeProxy"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Node"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Master"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControlPlane"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ControllerManager"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Scheduler"/>
+</ecore:EPackage>
