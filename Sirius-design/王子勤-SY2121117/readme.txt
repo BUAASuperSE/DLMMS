@@ -1,0 +1,1 @@
+operational已全部完成，strategic有一个bug，90%也已经完成，bug解决后会上传新的录屏和odesign文件

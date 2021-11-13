@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Operational" version="12.0.0.2017041100">
+  <ownedViewpoints name="Operationalelements">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Operational diagram" domainClass="operational.Operational" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="OperationalRole" domainClass="operational.OperationalRole">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OperationalParameter" domainClass="operational.OperationalParameter">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OperationalMethod" domainClass="operational.OperationalMethod">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OperationalPerformer" domainClass="operational.OperationalPerformer">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Operational" domainClass="operational.Operational">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OperationalArchitecture" domainClass="operational.OperationalArchitecture">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="hasRole" sourceMapping="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalPerformer']" targetMapping="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalRole']" targetFinderExpression="aql:self.hasRole">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="hasParameter" sourceMapping="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalMethod']" targetMapping="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalParameter']" targetFinderExpression="aql:self.hasParameter">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OperationalRole" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalRole']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.OperationalRole" referenceName="operationalRole"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OperationalParameter" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalParameter']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.OperationalParameter" referenceName="operationalParameter"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="hasRole" edgeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@edgeMappings[name='hasRole']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="hasRole" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OperationalMethod" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalMethod']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.OperationalMethod" referenceName="operationalMethod"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="OperationalPerfomer" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalPerformer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.OperationalPerformer" referenceName="operationalPerformer"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Operational" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='Operational']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.Operational" referenceName="operational"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="operationalArchitecture" nodeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@nodeMappings[name='OperationalArchitecture']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="operational.OperationalArchitecture" referenceName="operationalArchitecture"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="hasParameter" edgeMappings="//@ownedViewpoints[name='Operationalelements']/@ownedRepresentations[name='Operational%20diagram']/@defaultLayer/@edgeMappings[name='hasParameter']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="hasParameter" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>
