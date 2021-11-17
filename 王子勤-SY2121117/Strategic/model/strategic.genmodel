@@ -10,24 +10,28 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Strategic" disposableProviderFactory="true" ecorePackage="strategic.ecore#/">
     <genClasses ecoreClass="strategic.ecore#//ActualEnduringTask">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//ActualEnduringTask/Name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//ActualEnduringTask/EnduringTask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//ActualEnduringTask/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference strategic.ecore#//ActualEnduringTask/hasPhase"/>
     </genClasses>
     <genClasses ecoreClass="strategic.ecore#//ActualEnterprisePhase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//ActualEnterprisePhase/Name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//ActualEnterprisePhase/EnterprisePhase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//ActualEnterprisePhase/name"/>
     </genClasses>
     <genClasses ecoreClass="strategic.ecore#//CapabilityRole">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//CapabilityRole/Name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//CapabilityRole/CapablitityRole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//CapabilityRole/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference strategic.ecore#//CapabilityRole/hasCapability"/>
     </genClasses>
     <genClasses ecoreClass="strategic.ecore#//EnterpriseGoal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//EnterpriseGoal/Name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//EnterpriseGoal/EnterpriseGoal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//EnterpriseGoal/name"/>
     </genClasses>
-    <genClasses ecoreClass="strategic.ecore#//strategic"/>
+    <genClasses ecoreClass="strategic.ecore#//Strategic">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Strategic/enterprisePhase"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//Strategic/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Strategic/actualEnduringTask"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Strategic/capablitityRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Strategic/enterpriseGoal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Strategic/capability"/>
+    </genClasses>
     <genClasses ecoreClass="strategic.ecore#//Capability">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference strategic.ecore#//Capability/capabilities"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute strategic.ecore#//Capability/Name"/>
     </genClasses>
   </genPackages>

@@ -10,27 +10,29 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Operational" disposableProviderFactory="true" ecorePackage="operational.ecore#/">
     <genClasses ecoreClass="operational.ecore#//Operational">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//Operational/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//Operational/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//Operational/operationalRole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//Operational/operationalMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//Operational/operationalArchitecture"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//Operational/operationalPerformer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//Operational/operationalParameter"/>
     </genClasses>
     <genClasses ecoreClass="operational.ecore#//OperationalPerformer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalPerformer/operationalPerformer"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalPerformer/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalPerformer/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalPerformer/hasRole"/>
     </genClasses>
     <genClasses ecoreClass="operational.ecore#//OperationalArchitecture">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalArchitecture/operationalArchitecture"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalArchitecture/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalArchitecture/name"/>
     </genClasses>
     <genClasses ecoreClass="operational.ecore#//OperationalMethod">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalMethod/operationalMethod"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalMethod/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalMethod/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalMethod/hasParameter"/>
     </genClasses>
     <genClasses ecoreClass="operational.ecore#//OperationalParameter">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalParameter/operationalParameter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalParameter/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalParameter/name"/>
     </genClasses>
     <genClasses ecoreClass="operational.ecore#//OperationalRole">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference operational.ecore#//OperationalRole/operationalRole"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalRole/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute operational.ecore#//OperationalRole/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

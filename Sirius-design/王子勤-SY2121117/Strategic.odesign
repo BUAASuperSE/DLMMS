@@ -45,7 +45,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="hasPhrase" sourceMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='ActualEnduringTask']" targetMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='ActualEnterprisePhase']" targetFinderExpression="aql:self.hasPhrase">
+        <edgeMappings name="hasCapability" sourceMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='CapabilityRole']" targetMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="aql:self.hasCapability">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -53,7 +53,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="hasCapability" sourceMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='CapabilityRole']" targetMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='Capability']" targetFinderExpression="aql:self.hasCapability">
+        <edgeMappings name="hasPhase" sourceMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='ActualEnduringTask']" targetMapping="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@nodeMappings[name='ActualEnterprisePhase']" targetFinderExpression="aql:self.hasPhase">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -76,7 +76,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="strategic.ActualEnterprisePhase" referenceName="actualEnterprisePhase"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="strategic.ActualEnterprisePhase" referenceName="enterprisePhase"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -94,7 +94,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="strategic.CapabilityRole" referenceName="capabilityRole"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="strategic.CapabilityRole" referenceName="capablitityRole"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -116,14 +116,14 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="hasPhrase" edgeMappings="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@edgeMappings[name='hasPhrase']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="hasPhase" edgeMappings="//@ownedViewpoints[name='Strategicelements']/@ownedRepresentations[name='Strategic%20diagram']/@defaultLayer/@edgeMappings[name='hasPhase']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
             <targetViewVariable name="targetView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="hasPhrase" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="hasPhase" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
