@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="Information" version="12.0.0.2017041100">
+  <ownedViewpoints name="InformationElement">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Information Diagram" domainClass="information.Information" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="Content" domainClass="information.Content">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="TextModel" domainClass="information.TextModel">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:format" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ImageModel" domainClass="information.ImageModel">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:format" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="VideoModel" domainClass="information.VideoModel">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:format" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="AudioModel" domainClass="information.AudioModel">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="12" labelExpression="feature:format" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="hasContent" sourceMapping="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='TextModel']" targetMapping="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='Content']" targetFinderExpression="aql:self.hasContent">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Content" nodeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='Content']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="information.Content" referenceName="content"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="TextModel" nodeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='TextModel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="information.TextModel" referenceName="textmodel"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ImageModel" nodeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='ImageModel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="information.ImageModel" referenceName="imagemodel"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="VideoModel" nodeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='VideoModel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="VideoModel" referenceName="videomodel"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="AudioModel" nodeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@nodeMappings[name='AudioModel']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="information.AudioModel" referenceName="audiomodel"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="hasContent" edgeMappings="//@ownedViewpoints[name='InformationElement']/@ownedRepresentations[name='Information%20Diagram']/@defaultLayer/@edgeMappings[name='hasContent']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="hasContent" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

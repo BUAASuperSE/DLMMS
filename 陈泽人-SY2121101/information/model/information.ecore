@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="information" nsURI="http://www.example.org/information" nsPrefix="information">
+  <eClassifiers xsi:type="ecore:EClass" name="Information">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="information"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
+        eType="#//Content" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sender" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="receiver" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textmodel" upperBound="-1"
+        eType="#//TextModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imagemodel" upperBound="-1"
+        eType="#//ImageModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="videomodel" upperBound="-1"
+        eType="#//VideoModel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="audiomodel" upperBound="-1"
+        eType="#//AudioModel" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Content">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="content"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="textmodel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasContent" eType="#//Content"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="imagemodel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VideoModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="videomodel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AudioModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="format" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="audiomodel"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="services" nsURI="http://www.example.org/services" nsPrefix="services">
+  <eClassifiers xsi:type="ecore:EClass" name="Services">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="service"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networkresource" upperBound="-1"
+        eType="#//NetworkResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cpuresource" upperBound="-1"
+        eType="#//CpuResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gpuresource" upperBound="-1"
+        eType="#//GpuResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="storageresource" upperBound="-1"
+        eType="#//StorageResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="policy" upperBound="-1"
+        eType="#//Policy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="networkresource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CpuResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="cpuresource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GpuResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="gpuresource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StorageResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="storageresource"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Policy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="policy"/>
+  </eClassifiers>
+</ecore:EPackage>
