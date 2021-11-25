@@ -10,8 +10,8 @@ UseCaseModel DLMMS {
 	UC::searchOnlineModel
 	UC::addModelAccessPermission
 	UC::updateModelAccessPermission definedBySSD(UpdateModelAccessPermissionSSD) relatedService(UpdateModelAccessPermissionService)
-	UC::createModelSharingLink
-	UC::updateModelSharingLinkAccessPermission
+	UC::createModelSharingLink definedBySSD(CreateModelSharingLinkSSD) relatedService(CreateModelSharingLinkService)
+	UC::updateModelSharingLinkAccessPermission definedBySSD(UpdateModelSharingLinkAccessPermissionSSD) relatedService(UpdateModelSharingLinkAccessPermissionService)
 	UC::createOnlineModelAPI
 	UC::updateOnlineModelAPI include checkRunningStatus
 	UC::downloadModelBySharingLink
@@ -218,6 +218,59 @@ UseCaseModel DLMMS {
 
 	}
 
+	Interaction CreateModelSharingLinkSSD {
+
+		[Participants: ModelOwner CreateModelSharingLinkService]
+
+		CallMessage::CreateModelSharingLinkSSDCallMessage1(inputAccessLink CreateModelSharingLinkSSDCallMessage1SendingEnd -> CreateModelSharingLinkSSDExecution1StartEnd)
+		ReturnMessage::CreateModelSharingLinkSSDCallMessage1Return(CreateModelSharingLinkSSDExecution1FinishEnd -> CreateModelSharingLinkSSDCallMessage1ReturnReceivingEnd CreateModelSharingLinkSSDCallMessage1)
+		CallMessage::CreateModelSharingLinkSSDCallMessage3(confirmCreate CreateModelSharingLinkSSDCallMessage3SendingEnd -> CreateModelSharingLinkSSDExecution2StartEnd)
+		ReturnMessage::CreateModelSharingLinkSSDCallMessage3Return(CreateModelSharingLinkSSDExecution2FinishEnd -> CreateModelSharingLinkSSDCallMessage3ReturnReceivingEnd CreateModelSharingLinkSSDCallMessage3)
+
+		Execution::CreateModelSharingLinkSSDExecution1(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution1StartEnd CreateModelSharingLinkSSDExecution1FinishEnd)
+		Execution::CreateModelSharingLinkSSDExecution2(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution2StartEnd CreateModelSharingLinkSSDExecution2FinishEnd)
+
+		MessageEnd::CreateModelSharingLinkSSDCallMessage1SendingEnd(ModelOwner CreateModelSharingLinkSSDCallMessage1)
+		ExecutionEnd::CreateModelSharingLinkSSDExecution1StartEnd(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution1)
+		ExecutionEnd::CreateModelSharingLinkSSDExecution1FinishEnd(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution1)
+		MessageEnd::CreateModelSharingLinkSSDCallMessage1ReturnReceivingEnd(ModelOwner CreateModelSharingLinkSSDCallMessage1Return)
+		MessageEnd::CreateModelSharingLinkSSDCallMessage3SendingEnd(ModelOwner CreateModelSharingLinkSSDCallMessage3)
+		ExecutionEnd::CreateModelSharingLinkSSDExecution2StartEnd(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution2)
+		ExecutionEnd::CreateModelSharingLinkSSDExecution2FinishEnd(CreateModelSharingLinkService CreateModelSharingLinkSSDExecution2)
+		MessageEnd::CreateModelSharingLinkSSDCallMessage3ReturnReceivingEnd(ModelOwner CreateModelSharingLinkSSDCallMessage3Return)
+
+	}
+
+	Interaction UpdateModelSharingLinkAccessPermissionSSD {
+
+		[Participants: ModelOwner UpdateModelSharingLinkAccessPermissionService]
+
+		CallMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage1(inputTargetModelID UpdateModelSharingLinkAccessPermissionSSDCallMessage1SendingEnd -> UpdateModelSharingLinkAccessPermissionSSDExecution1StartEnd)
+		ReturnMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage1Return(UpdateModelSharingLinkAccessPermissionSSDExecution1FinishEnd -> UpdateModelSharingLinkAccessPermissionSSDCallMessage1ReturnReceivingEnd UpdateModelSharingLinkAccessPermissionSSDCallMessage1)
+		CallMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage3(updateLinkState UpdateModelSharingLinkAccessPermissionSSDCallMessage3SendingEnd -> UpdateModelSharingLinkAccessPermissionSSDExecution2StartEnd)
+		ReturnMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage3Return(UpdateModelSharingLinkAccessPermissionSSDExecution2FinishEnd -> UpdateModelSharingLinkAccessPermissionSSDCallMessage3ReturnReceivingEnd UpdateModelSharingLinkAccessPermissionSSDCallMessage3)
+		CallMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage5(confirmUpdateLinkPermission UpdateModelSharingLinkAccessPermissionSSDCallMessage5SendingEnd -> UpdateModelSharingLinkAccessPermissionSSDExecution3StartEnd)
+		ReturnMessage::UpdateModelSharingLinkAccessPermissionSSDCallMessage5Return(UpdateModelSharingLinkAccessPermissionSSDExecution3FinishEnd -> UpdateModelSharingLinkAccessPermissionSSDCallMessage5ReturnReceivingEnd UpdateModelSharingLinkAccessPermissionSSDCallMessage5)
+
+		Execution::UpdateModelSharingLinkAccessPermissionSSDExecution1(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution1StartEnd UpdateModelSharingLinkAccessPermissionSSDExecution1FinishEnd)
+		Execution::UpdateModelSharingLinkAccessPermissionSSDExecution2(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution2StartEnd UpdateModelSharingLinkAccessPermissionSSDExecution2FinishEnd)
+		Execution::UpdateModelSharingLinkAccessPermissionSSDExecution3(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution3StartEnd UpdateModelSharingLinkAccessPermissionSSDExecution3FinishEnd)
+
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage1SendingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage1)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution1StartEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution1)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution1FinishEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution1)
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage1ReturnReceivingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage1Return)
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage3SendingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage3)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution2StartEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution2)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution2FinishEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution2)
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage3ReturnReceivingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage3Return)
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage5SendingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage5)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution3StartEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution3)
+		ExecutionEnd::UpdateModelSharingLinkAccessPermissionSSDExecution3FinishEnd(UpdateModelSharingLinkAccessPermissionService UpdateModelSharingLinkAccessPermissionSSDExecution3)
+		MessageEnd::UpdateModelSharingLinkAccessPermissionSSDCallMessage5ReturnReceivingEnd(ModelOwner UpdateModelSharingLinkAccessPermissionSSDCallMessage5Return)
+
+	}
+
 	Service ModifyRunningStatusService {
 
 		[Operation]
@@ -267,6 +320,23 @@ UseCaseModel DLMMS {
 		inputModelID(modelId)
 		updateModelContent(content)
 		updateModelDescription(descripition)
+
+	}
+
+	Service CreateModelSharingLinkService {
+
+		[Operation]
+		inputAccessLink(modelId)
+		confirmCreate()
+
+	}
+
+	Service UpdateModelSharingLinkAccessPermissionService {
+
+		[Operation]
+		inputTargetModelID(modelId)
+		updateLinkState(state)
+		confirmUpdateLinkPermission()
 
 	}
 
@@ -491,6 +561,79 @@ UseCaseModel DLMMS {
 
 	}
 
+	Contract CreateModelSharingLinkService::inputAccessLink(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				self.ModelLink = "http://ip:port/link/" + modelId and
+				self.ModelLinkState = "closed" and
+				result = false
+			endif
+	}
+
+	Contract CreateModelSharingLinkService::confirmCreate() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.AccessLink = self.ModelLink and
+			self.Model.AccessLinkState = self.ModelLinkState and
+			return = true
+	}
+
+	Contract UpdateModelSharingLinkAccessPermissionService::inputTargetModelID(modelId : String) : Boolean {
+
+		definition:
+			model:Model = Model.allInstance()->any(m:Model | m.modelId = modelId)
+
+		precondition:
+			true
+		postcondition:
+			if
+				(model.oclIsUndefined() = false)
+			then
+				self.ModelIDValidated = true and
+				self.Model = model and
+				result = true
+			else
+				self.ModelIDValidated = false and
+				result = false
+			endif
+	}
+
+	Contract UpdateModelSharingLinkAccessPermissionService::updateLinkState(state : String) : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.ModelLinkState = state and
+			return = true
+	}
+
+	Contract UpdateModelSharingLinkAccessPermissionService::confirmUpdateLinkPermission() : Boolean {
+
+		precondition:
+			self.ModelIDValidated = true and
+			self.Model.oclIsUndefined() = false
+		postcondition:
+			self.Model.AccessLinkState = self.ModelLinkState and
+			return = true
+	}
+
 }
 
 DomainModel DLMMS {
@@ -555,3 +698,4 @@ DomainModel DLMMS {
 	}
 
 }
+
