@@ -1,0 +1,43 @@
+module personnel2person;
+-- @path MMPersonnel=/personnel2person/personnel.ecore
+-- @path MMPerson=/personnel2person/person.ecore
+create OUT: MMPerson from IN: MMPersonnel;
+
+
+helper context MMPersonnel!Employee def: isResearcher(): Boolean =
+	if not self.researchDepartment.oclIsUndefined() then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMPersonnel!Employee def: isDeveloper(): Boolean =
+	if not self.developDepartment.oclIsUndefined() then
+		true
+	else
+		false
+	endif;
+
+
+rule Employee2Researcher {
+	from 
+			p: MMPersonnel!Personnel,
+			e: MMPersonnel!Employee (e.isResearcher())
+	to
+			r: MMPerson!Researcher (
+				department <- p.departmentName,
+				name <- e.name
+			)
+}
+
+rule Employee2Developer {
+	from 
+			p: MMPersonnel!Personnel,
+			e: MMPersonnel!Employee (e.isDeveloper())
+	to
+			r: MMPerson!Developer (
+				department <- p.departmentName,
+				name <- e.name
+			)
+}
