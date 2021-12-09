@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Operational">
+  <eClassifiers xsi:type="ecore:EClass" name="Operational">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operational" ordered="false"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="badmethod" lowerBound="1"
+        eType="#//OperationalMethod" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goodmethod" lowerBound="1"
+        eType="#//OperationalMethod" containment="true" eOpposite="#//OperationalMethod/goodMethodOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operationalMethod" ordered="false"
+        unique="false" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="badMethodOf" ordered="false"
+        lowerBound="1" eType="#//Operational"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goodMethodOf" ordered="false"
+        lowerBound="1" eType="#//Operational" eOpposite="#//Operational/goodmethod"/>
+  </eClassifiers>
+</ecore:EPackage>
