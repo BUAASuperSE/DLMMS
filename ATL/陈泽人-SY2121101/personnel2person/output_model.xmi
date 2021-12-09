@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMPerson">
+  <Researcher name="Rock" department="SenseTime"/>
+  <Researcher name="Adam" department="SenseTime"/>
+  <Developer name="AmandaJShao" department="SenseTime"/>
+  <Developer name="Zhiqin" department="SenseTime"/>
+</xmi:XMI>
