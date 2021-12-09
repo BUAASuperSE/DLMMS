@@ -1,0 +1,40 @@
+module UafToLamda;
+
+-- @path uAFMetaModel=/UAFMetaToLamda/uAFMetaModel.ecore
+-- @path node=/UAFMetaToLamda/Persons.ecore
+
+create OUT: node from IN: uAFMetaModel;
+
+helper context uAFMetaModel!ResourcePerformer def: isFemale(): Boolean =
+	if not self.performF.oclIsUndefined() then
+		true
+	else
+		if not self.AssetM.oclIsUndefined() then
+			true
+		else
+			false
+		endif
+	endif;
+
+helper context uAFMetaModel!ResourcePerformer def: familyName: String =
+	if not self.performF.oclIsUndefined() then
+		self.performF.assname
+	else
+		self.AssetM.assname
+	endif;
+rule Member2Male {
+	from
+		s: uAFMetaModel!ResourcePerformer (not s.isFemale())
+	to
+		t: node!ANode (
+			NodeName <- s.pername + ' ' + s.familyName
+		)
+}
+rule Member2Female {
+	from
+		s: uAFMetaModel!ResourcePerformer (s.isFemale())
+	to
+		t: node!BNode (
+			NodeName <- s.pername + ' ' + s.familyName
+		)
+}
