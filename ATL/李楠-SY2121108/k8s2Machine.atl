@@ -1,0 +1,42 @@
+module K8S2Machine;
+
+-- @path K8Ss=/K8S2Machines/k8s.ecore
+-- @path Machines=/K8S2Machines/machine.ecore
+
+create OUT: Machines from IN: K8Ss;
+
+helper context K8Ss!Node def: isStateful(): Boolean =
+	if not self.k8sEtcd.oclIsUndefined() then
+		true
+	else
+		false
+	endif;
+
+helper context K8Ss!Node def: version: String = 
+	if not self.k8sMater.oclIsUndefined() then
+		self.k8sMater.Version
+	else
+		if not self.k8sWorker.oclIsUndefined() then
+			self.k8sWorker.Version
+		else 
+			self.k8sEtcd.Version
+		endif
+	endif;
+
+rule Node2StatefulMachine {
+	from 
+		s: K8Ss!Node (s.isStateful())
+	to 
+		t: Machines!StatefulMachine (
+			functionName <- s.version + ' ' + s.OS
+		)
+}
+
+rule Node2StatelessMachine {
+	from 
+		s: K8Ss!Node (not s.isStateful())
+	to 
+		t: Machines!StatelessMachine (
+			functionName <- s.version + ' ' + s.OS
+		)
+}
