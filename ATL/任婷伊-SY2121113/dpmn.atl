@@ -1,0 +1,28 @@
+module BPMN;
+
+-- @path BPMNActivity=/BPMN/bpmn.ecore
+-- @path BPMNTask=/BPMN/task.ecore
+create OUT: Task from IN: BPMNActivity;
+
+helper context BPMNActivity!Activity def: isValid(): Boolean =
+	if not self.bpmnActivity.oclIsUndefined() then
+		true
+	else
+		false
+	endif;
+
+helper context BPMNTask!Task def: func(): String =
+	if not self.bpmnTask.oclIsUndefined() then
+		self.task.Func
+	else
+		self.task.DefaultFunc
+	endif;
+
+rule Activity2Task {
+	from 
+		s: BPMNActivity!Activity (s.isValid())
+	to 
+		t: BPMNTask!Task (
+			functionName <- s.func
+		)
+}
