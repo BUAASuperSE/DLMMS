@@ -1,0 +1,10 @@
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns="bpmn">
+    <activity name="subProcess1">
+        <task func="send"/>
+    </activity>
+    <activity name="subProcess2">
+        <task func="receive"/>
+    </activity>
+</xmi:XMI>
