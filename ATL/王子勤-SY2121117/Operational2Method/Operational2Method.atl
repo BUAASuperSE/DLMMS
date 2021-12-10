@@ -1,0 +1,27 @@
+module Operational2Method;
+-- @path Operational=/Families2Persons/Operational.ecore
+-- @path Method=/Families2Persons/Method.ecore
+create OUT: Method from IN: Operational;
+helper context Operational!OperationalMethod def: isGoodMethod(): Boolean =
+	if not self.goodMethodOf.oclIsUndefined() then
+		true
+	else
+		false
+	endif;
+rule Method2GoodMethod {
+	from
+		s: Operational!OperationalMethod (s.isGoodMethod())
+	to
+		t: Method!GoodMethod (
+			method <- 'goodMethod'
+		)
+}
+
+rule Method2BadMethod {
+	from
+		s: Operational!OperationalMethod (not s.isGoodMethod())
+	to
+		t: Method!BadMethod (
+			method <- 'badMethod'
+		)
+}
