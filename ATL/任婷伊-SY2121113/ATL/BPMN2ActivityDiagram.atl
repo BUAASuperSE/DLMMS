@@ -1,0 +1,69 @@
+module BPMN2ActivityDiagram;
+
+-- @path BPMN=/ATL/bpmn.ecore
+-- @path ActivityDiagram=/ATL/activityDiagram.ecore
+
+create OUT: ActivityDiagram from IN: BPMN;
+
+rule Join2JoinNode {
+	from
+		s: BPMN!Join
+	to
+		t: ActivityDiagram!JoinNode (
+			name <- s.name
+		)
+}
+
+rule FlowObject2ActivityEdge {
+	from
+		s: BPMN!FlowObject
+	to
+		t: ActivityDiagram!ActivityEdge (
+			name <- s.name
+		)
+}
+
+rule Decide2DecisionNode {
+	from
+		s: BPMN!Decide
+	to
+		t: ActivityDiagram!DecisionNode (
+			name <- s.DecideExpression
+		)
+}
+
+rule Process2ActivityNode {
+	from
+		s: BPMN!Process
+	to
+		t: ActivityDiagram!ActivityNode (
+			name <- s.name
+		)
+}
+
+rule Start2InitialNode {
+	from
+		s: BPMN!Start
+	to
+		t: ActivityDiagram!InitialNode (
+			name <- s.startName
+		)
+}
+
+rule End2FinalNode {
+	from
+		s: BPMN!End
+	to
+		t: ActivityDiagram!FinalNode (
+			name <- s.endName
+		)
+}
+
+rule Fork2ForkNode {
+	from
+		s: BPMN!Fork
+	to
+		t: ActivityDiagram!ForkNode (
+			name <- s.name
+		)
+}
