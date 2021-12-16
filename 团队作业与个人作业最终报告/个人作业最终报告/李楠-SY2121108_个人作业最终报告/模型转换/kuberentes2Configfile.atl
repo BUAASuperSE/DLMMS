@@ -1,0 +1,70 @@
+module kubernetes2config;
+
+-- @path kuberneteses=/Kuberneteses2Configfiles/kuberneteses.ecore
+-- @path configfiles=/Kuberneteses2Configfiles/configfiles.ecore
+
+create OUT: configfiles from IN: kuberneteses;
+
+helper context kuberneteses!Node def: isMaster(): Boolean =
+	if not self.clusterMaster.oclIsUndefined() then
+		true
+	else 
+		false
+	endif;
+
+helper context kuberneteses!Node def: isWorker(): Boolean =
+	if not self.clusterWorker.oclIsUndefined() then
+		true
+	else 
+		false
+	endif;
+
+helper context kuberneteses!Node def: isEtcd(): Boolean =
+	if not self.clusterEtcd.oclIsUndefined() then
+		true
+	else 
+		false
+	endif;
+
+
+rule Cluster2ClusterConfig {
+	from
+		s: kuberneteses!Cluster
+	to
+		t: configfiles!ClusterConfig (
+			version <- s.version,
+			masterConfigs <- s.masters -> collect(e | thisModule.Node2MasterConfig(e)),
+			workerConfigs <- s.workers -> collect(e | thisModule.Node2EtcdConfig(e)),
+			etcdConfigs <- s.etcds -> collect(e | thisModule.Node2WorkerConfig(e))
+		)
+}
+
+lazy rule Node2MasterConfig {
+	from
+		s: kuberneteses!Node (s.isMaster())
+	to
+		t: configfiles!MasterConfig (
+			name <- s.name,
+			ip <- s.ip
+		)
+}
+
+lazy rule Node2EtcdConfig {
+	from
+		s: kuberneteses!Node (s.isEtcd())
+	to
+		t: configfiles!MasterConfig (
+			name <- s.name,
+			ip <- s.ip
+		)
+}
+
+lazy rule Node2WorkerConfig {
+	from
+		s: kuberneteses!Node (s.isWorker())
+	to
+		t: configfiles!MasterConfig (
+			name <- s.name,
+			ip <- s.ip
+		)
+}

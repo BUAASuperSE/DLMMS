@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns="kuberneteses">
+    <Cluster version="1.20.4">
+        <masters name="master-01" ip="1.1.8.1" />
+
+        <etcds name="etcd-01" ip="1.1.7.1" />
+
+        <workers name="worker-01" ip="1.1.9.1" />
+        <workers name="worker-02" ip="1.1.8.2" />
+    </Cluster>
+</xmi:XMI>

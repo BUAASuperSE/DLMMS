@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configfiles:ClusterConfig xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:configfiles="http://www.example.org/configfiles" version="1.20.4">
+  <etcdConfigs xsi:type="configfiles:MasterConfig" name="etcd-01" ip="1.1.7.1"/>
+  <masterConfigs name="master-01" ip="1.1.8.1"/>
+  <workerConfigs xsi:type="configfiles:MasterConfig" name="worker-01" ip="1.1.9.1"/>
+  <workerConfigs xsi:type="configfiles:MasterConfig" name="worker-02" ip="1.1.8.2"/>
+</configfiles:ClusterConfig>
