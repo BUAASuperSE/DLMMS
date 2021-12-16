@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMService">
+	<Service name="FaceRecognition" runningState="running">
+		<resource type="cpu" name="e5-2667v2" quota="64" state="ok" />
+		<resource type="cpu" name="e3-1231v5" quota="256" state="ok" />
+		<resource type="gpu" name="RTX-3080Ti" quota="32" state="broken" />
+		<resource type="gpu" name="Tesla-V100-32G" quota="128" state="ok" />
+		<resource type="storage" name="/mnt/lustre/" quota="2048" state="ok" />
+		<policy name="BUAA">
+			<executor name="A12" runningState="running" />
+			<executor name="B08" runningState="suspended" />
+		</policy>
+		<policy name="FTKJ">
+			<executor name="u34" runningState="running" />
+		</policy>
+		<interface requestUrl="/api/face/" requestMethod="POST" inputArgs="img:Array[byte];seed:int" />
+		<interface requestUrl="/api/logs/" requestMethod="GET" inputArgs="" />
+	</Service>
+</xmi:XMI>
+

@@ -1,0 +1,111 @@
+module I2M;
+
+-- @path MMInformation=/information2message/Informations.ecore
+-- @path MMMessage=/information2message/Messages.ecore
+
+create OUT: MMMessage from IN: MMInformation;
+
+
+helper context MMInformation!Content def: getTimestamp(): String = 
+	if not self.fromContainer.oclIsUndefined() then
+		self.fromContainer.timestamp
+	else
+		'null'
+	endif;
+
+
+helper context MMInformation!Content def: getContainerId(): String = 
+	if not self.fromContainer.oclIsUndefined() then
+		self.fromContainer.id
+	else
+		'null'
+	endif;
+
+
+helper context MMInformation!Content def: getInformationId(): String = 
+	if not self.fromContainer.oclIsUndefined() then
+		if not self.fromContainer.fromInformation.oclIsUndefined() then
+			self.fromContainer.fromInformation.id
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMInformation!Content def: getSender(): String =
+	if not self.fromContainer.oclIsUndefined() then
+		if not self.fromContainer.fromInformation.oclIsUndefined() then
+			if not self.fromContainer.fromInformation.sender.oclIsUndefined() then
+				self.fromContainer.fromInformation.sender.name
+			else
+				'null'
+			endif
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMInformation!Content def: getReceiver(): String =
+	if not self.fromContainer.oclIsUndefined() then
+		if not self.fromContainer.fromInformation.oclIsUndefined() then
+			self.fromContainer.fromInformation.receiver->collect(b|b.name)->flatten()
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMInformation!Content def: isTextContent(): String =
+	if self.type = 'text' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMInformation!Content def: isImageContent(): String =
+	if self.type = 'image' then
+		true
+	else
+		false
+	endif;
+
+
+rule Information2TextMessage {
+	from 
+		i: MMInformation!Content (i.isTextContent())
+	to 
+		o: MMMessage!TextMessage (
+			id <- i.id,
+			value <- i.value,
+			timestamp <- i.getTimestamp(),
+			containerId <- i.getContainerId(),
+			informationId <- i.getInformationId(),
+			sender <- i.getSender(),
+			receiver <- i.getReceiver()
+		)
+}
+
+
+rule Information2ImageMessage {
+	from 
+		i: MMInformation!Content (i.isImageContent())
+	to 
+		o: MMMessage!ImageMessage (
+			id <- i.id,
+			value <- i.value,
+			timestamp <- i.getTimestamp(),
+			containerId <- i.getContainerId(),
+			informationId <- i.getInformationId(),
+			sender <- i.getSender(),
+			receiver <- i.getReceiver()
+		)
+}
+

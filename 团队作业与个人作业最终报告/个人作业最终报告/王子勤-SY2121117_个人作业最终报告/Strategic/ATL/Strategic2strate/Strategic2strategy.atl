@@ -1,0 +1,52 @@
+module Strategic2strategy;
+-- @path Strategic=/Strategic2strategy/Strategic.ecore
+-- @path strategy=/Strategic2strategy/strategy.ecore
+create OUT: strategy from IN: Strategic;
+rule strategic2strategy {
+	from
+		s: Strategic!Strategic
+	to
+		t: strategy!strategy (
+			name <- s.name
+		)
+}
+rule Capability2ability {
+	from
+		s: Strategic!Capability
+	to
+		t: strategy!ability (
+			name <- s.Name
+		)
+}
+rule ActualEnduringTask2task {
+	from
+		s: Strategic!ActualEnduringTask
+	to
+		t: strategy!task (
+			name <- s.name
+		)
+}
+rule ActualEnterprisePhase2phase {
+	from
+		s: Strategic!ActualEnterprisePhase
+	to
+		t: strategy!phase (
+			name <- s.name
+		)
+}
+rule CapabilityRole2role {
+	from
+		s: Strategic!CapabilityRole
+	to
+		t: strategy!role (
+			name <- s.name
+		)
+}
+rule EnterpriseGoal2goal {
+	from
+		s: Strategic!EnterpriseGoal
+	to
+		t: strategy!goal (
+			name <- s.name
+		)
+}

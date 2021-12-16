@@ -1,3 +1,4 @@
+
 ## 作业四：目标模型与 OMG 标准模型转换
 
 SY2121113 任婷伊
@@ -6,15 +7,6 @@ SY2121113 任婷伊
 
 #### 转换内容
 
-| BPMN       | activity diagram |    说明  |
-| ---------- | ---------------- | ---- |
-| Fork       | ForkNode         | 分叉 |
-| Join       | JoinNode         | 合并 |
-| FlowObject | ActivityEdge     | 流 |
-| Decide     | DecisionNode     | 判断 |
-| Process    | ActivityNode     | 活动节点 |
-| Start      | InitialNode      | 开始 |
-| End        | FinalNode        | 结束 |
 
 #### 转换依据
 

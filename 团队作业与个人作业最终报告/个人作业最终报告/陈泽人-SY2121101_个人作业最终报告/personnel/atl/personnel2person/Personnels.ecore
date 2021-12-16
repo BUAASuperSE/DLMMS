@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MMPersonnel">
+  <eClassifiers xsi:type="ecore:EClass" name="Personnel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="board" ordered="false"
+        unique="false" lowerBound="1" eType="#//Board" containment="true" eOpposite="#//Board/fromCompany"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="department" ordered="false"
+        unique="false" upperBound="-1" eType="#//Department" containment="true" eOpposite="#//Department/fromCompany"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Board">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="directorOfBoard" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Director" containment="true" eOpposite="#//Director/fromBoard"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromCompany" ordered="false"
+        lowerBound="1" eType="#//Personnel" eOpposite="#//Personnel/board"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Director">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromBoard" ordered="false"
+        lowerBound="1" eType="#//Board" eOpposite="#//Board/directorOfBoard"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Department">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromCompany" ordered="false"
+        eType="#//Personnel" eOpposite="#//Personnel/department"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="employee" ordered="false"
+        unique="false" upperBound="-1" eType="#//Employee" containment="true" eOpposite="#//Employee/fromDepartment"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Employee">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromDepartment" ordered="false"
+        eType="#//Department" eOpposite="#//Department/employee"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="management" ordered="false"
+        unique="false" upperBound="-1" eType="#//Employee" containment="true" eOpposite="#//Employee/directSupervisor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="directSupervisor" ordered="false"
+        eType="#//Employee" eOpposite="#//Employee/management"/>
+  </eClassifiers>
+</ecore:EPackage>

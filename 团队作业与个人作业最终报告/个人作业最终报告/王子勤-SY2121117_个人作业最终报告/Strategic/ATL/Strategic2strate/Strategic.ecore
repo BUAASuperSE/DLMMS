@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Strategic" nsURI="http://www.example.org/Strategic" nsPrefix="Strategic">
+  <eClassifiers xsi:type="ecore:EClass" name="ActualEnduringTask">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;actualEnduringTask&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPhase" eType="#//ActualEnterprisePhase"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskOf" eType="#//Strategic"
+        eOpposite="#//Strategic/actualEnduringTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActualEnterprisePhase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;enterprisePhase&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="phaseOf" eType="#//Strategic"
+        eOpposite="#//Strategic/enterprisePhase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CapabilityRole">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;abilityRole&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasCapability" eType="#//Capability"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleOf" eType="#//Strategic"
+        eOpposite="#//Strategic/capablitityRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnterpriseGoal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;enterpriseGoal&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goalOf" eType="#//Strategic"
+        eOpposite="#//Strategic/enterpriseGoal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Strategic">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enterprisePhase" upperBound="-1"
+        eType="#//ActualEnterprisePhase" containment="true" eOpposite="#//ActualEnterprisePhase/phaseOf"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;strategic&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actualEnduringTask" upperBound="-1"
+        eType="#//ActualEnduringTask" containment="true" eOpposite="#//ActualEnduringTask/taskOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capablitityRole" upperBound="-1"
+        eType="#//CapabilityRole" containment="true" eOpposite="#//CapabilityRole/roleOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enterpriseGoal" upperBound="-1"
+        eType="#//EnterpriseGoal" containment="true" eOpposite="#//EnterpriseGoal/goalOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capability" upperBound="-1"
+        eType="#//Capability" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Capability">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;ability&quot;"/>
+  </eClassifiers>
+</ecore:EPackage>

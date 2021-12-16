@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:node="http://www.example.org/node">
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+  <node:Node NodeName="node">
+    <operationnode xsi:type="node:AgentName" agent="node"/>
+    <agentname agent="node"/>
+    <exchangenode xsi:type="node:FileNode" file="lalala"/>
+    <safenode safe="ass"/>
+    <rolenode xsi:type="node:SafeNode" safe="ass"/>
+    <resourcenode xsi:type="node:SafeNode" safe="ass"/>
+    <filenode file="lalala"/>
+  </node:Node>
+</xmi:XMI>

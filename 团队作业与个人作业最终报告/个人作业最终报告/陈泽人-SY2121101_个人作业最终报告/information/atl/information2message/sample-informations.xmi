@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMInformation">
+	<Information id="info_2njnvsd8">
+		<sender name="MKL" />
+		<receiver name="ZQW" />
+		<container id="cta_cxn8w4dk" timestamp="20211214_220845">
+			<content id="cte_dfn39sid" type="text" value="hello?" />
+			<content id="cte_4idsjsdn" type="image" value="/cache/987hfnwkj.jpg" />
+		</container>
+	</Information>
+</xmi:XMI>
+

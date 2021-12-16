@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Operational" nsURI="http://www.example.org/Operational" nsPrefix="Operational">
+  <eClassifiers xsi:type="ecore:EClass" name="Operational">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;operational&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalRole" upperBound="-1"
+        eType="#//OperationalRole" containment="true" eOpposite="#//OperationalRole/roleOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalMethod" upperBound="-1"
+        eType="#//OperationalMethod" containment="true" eOpposite="#//OperationalMethod/methodOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalArchitecture"
+        upperBound="-1" eType="#//OperationalArchitecture" containment="true" eOpposite="#//OperationalArchitecture/architectureOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalPerformer" upperBound="-1"
+        eType="#//OperationalPerformer" containment="true" eOpposite="#//OperationalPerformer/performerOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalParameter" upperBound="-1"
+        eType="#//OperationalParameter" containment="true" eOpposite="#//OperationalParameter/parameterOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalPerformer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;performer&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasRole" eType="#//OperationalRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performerOf" eType="#//Operational"
+        eOpposite="#//Operational/operationalPerformer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalArchitecture">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;architecture&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architectureOf" eType="#//Operational"
+        eOpposite="#//Operational/operationalArchitecture"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;method&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasParameter" eType="#//OperationalParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodOf" eType="#//Operational"
+        eOpposite="#//Operational/operationalMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalParameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;parameter&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterOf" eType="#//Operational"
+        eOpposite="#//Operational/operationalParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationalRole">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="&quot;role&quot;"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleOf" eType="#//Operational"
+        eOpposite="#//Operational/operationalRole"/>
+  </eClassifiers>
+</ecore:EPackage>

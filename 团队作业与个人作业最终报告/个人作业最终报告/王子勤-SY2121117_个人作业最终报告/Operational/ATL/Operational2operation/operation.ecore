@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="operation">
+  <eClassifiers xsi:type="ecore:EClass" name="operation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPerformer" eType="#//performer"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasArchitecture" eType="#//architecture"
+        containment="true" eOpposite="#//architecture/architectureOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasMethod" eType="#//method"
+        containment="true" eOpposite="#//method/methodOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasParameter" eType="#//parameter"
+        containment="true" eOpposite="#//parameter/parameterOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasRole" eType="#//role"
+        containment="true" eOpposite="#//role/roleOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="performer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="performerOf" eType="#//operation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="architecture">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="architectureOf" eType="#//operation"
+        eOpposite="#//operation/hasArchitecture"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="method">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methodOf" eType="#//operation"
+        eOpposite="#//operation/hasMethod"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterOf" eType="#//operation"
+        eOpposite="#//operation/hasParameter"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="role">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleOf" eType="#//operation"
+        eOpposite="#//operation/hasRole"/>
+  </eClassifiers>
+</ecore:EPackage>
