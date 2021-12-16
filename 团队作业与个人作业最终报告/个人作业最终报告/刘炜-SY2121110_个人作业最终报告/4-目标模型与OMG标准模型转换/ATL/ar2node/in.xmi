@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="actualResource">
+	<ActualResource name="node">
+		<actualcontrol acname="lalala"/>
+		<actualmanage amname="ass"/>
+	</ActualResource>
+	<ActualResource name="node">
+		<actualcontrol acname="lalala"/>
+		<actualmanage amname="ass"/>
+	</ActualResource>
+</xmi:XMI>

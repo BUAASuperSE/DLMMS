@@ -1,0 +1,51 @@
+module UafToLamda;
+
+-- @path s=/SecuritytoNode/security.ecore
+-- @path d=/SecuritytoNode/node.ecore
+
+create OUT : d from IN : s;
+
+rule wbe2Document {
+	from
+		rp : s! SecuritySource, 
+		ra : s! SecurityTest,
+		sn : s! SecuritySafe
+	to
+		dc: d!Node(
+			NodeName <- rp.name,
+			agentname <- thisModule.rp2ag(rp),
+			safenode <- thisModule.ra2sn(ra),
+			filenode <- thisModule.sn2fn(sn),
+			rolenode <- thisModule.ra2sn(ra),
+			exchangenode <- thisModule.sn2fn(sn),
+			resourcenode <- thisModule.ra2sn(ra),
+			operationnode <- thisModule.rp2ag(rp)
+		)
+}
+
+lazy rule rp2ag{
+	from 
+		rp : s! SecuritySource
+	to
+		ag: d!AgentName(
+			agent <- rp.name
+		)
+}
+
+lazy rule ra2sn{
+	from 
+		ra : s! SecurityTest
+	to
+		safenode: d!SafeNode(
+			safe <- ra.testname
+		)
+}
+
+lazy rule sn2fn{
+	from 
+		sn : s! SecuritySafe
+	to
+		filenode: d!FileNode(
+			file <- sn.saname
+		)
+}

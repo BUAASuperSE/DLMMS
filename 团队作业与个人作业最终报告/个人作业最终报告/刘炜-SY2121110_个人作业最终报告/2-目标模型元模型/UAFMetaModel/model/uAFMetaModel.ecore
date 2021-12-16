@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="uAFMetaModel" nsURI="http://www.example.org/uAFMetaModel" nsPrefix="uAFMetaModel">
+  <eClassifiers xsi:type="ecore:EClass" name="ResourcePerformer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realizingResource" lowerBound="1"
+        upperBound="-1" eType="#//Implements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceexchange" upperBound="-1"
+        eType="#//ResourceExchange" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pername" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourceasset" upperBound="-1"
+        eType="#//ResourceAsset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="safename" upperBound="-1"
+        eType="#//SafeName" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceArchitecture" eSuperTypes="#//ResourcePerformer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PhysicalResource" eSuperTypes="#//ResourcePerformer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrganizationalResource" eSuperTypes="#//PhysicalResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NaturalResource" eSuperTypes="#//PhysicalResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceArtifact" eSuperTypes="#//PhysicalResource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceExchange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" eType="#//ResourcePerformer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceRole">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ResourcePerformer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Implements" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationAgent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="realizedOperationalPerformer"
+        lowerBound="1" upperBound="-1" eType="#//Implements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceAsset">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SafeName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="safename" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+</ecore:EPackage>

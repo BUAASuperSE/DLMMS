@@ -1,0 +1,51 @@
+module UafToLamda;
+
+-- @path s=/ar2node/actualResourde.ecore
+-- @path d=/ar2node/node.ecore
+
+create OUT : d from IN : s;
+
+rule wbe2Document {
+	from
+		rp : s! ActualResource, 
+		ra : s! ActualControl,
+		sn : s! ActualManage
+	to
+		dc: d!Node(
+			NodeName <- rp.name,
+			agentname <- thisModule.rp2ag(rp),
+			safenode <- thisModule.ra2sn(ra),
+			filenode <- thisModule.sn2fn(sn),
+			rolenode <- thisModule.ra2sn(ra),
+			exchangenode <- thisModule.sn2fn(sn),
+			resourcenode <- thisModule.ra2sn(ra),
+			operationnode <- thisModule.rp2ag(rp)
+		)
+}
+
+lazy rule rp2ag{
+	from 
+		rp : s! ActualResource
+	to
+		ag: d!AgentName(
+			agent <- rp.name
+		)
+}
+
+lazy rule ra2sn{
+	from 
+		ra : s! ActualControl
+	to
+		safenode: d!SafeNode(
+			safe <- ra.acname
+		)
+}
+
+lazy rule sn2fn{
+	from 
+		sn : s! ActualManage
+	to
+		filenode: d!FileNode(
+			file <- sn.amname
+		)
+}

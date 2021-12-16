@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="node" nsURI="http://www.example.org/node" nsPrefix="node">
+  <eClassifiers xsi:type="ecore:EClass" name="Node">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NodeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationnode" upperBound="-1"
+        eType="#//OperationNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="agentname" upperBound="-1"
+        eType="#//AgentName" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exchangenode" upperBound="-1"
+        eType="#//ExchangeNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="safenode" upperBound="-1"
+        eType="#//SafeNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolenode" upperBound="-1"
+        eType="#//RoleNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resourcenode" upperBound="-1"
+        eType="#//ResourceNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="filenode" upperBound="-1"
+        eType="#//FileNode" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResourceNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implementsnode" upperBound="-1"
+        eType="#//ImplementsNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FileNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="file" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SafeNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="safe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="safenodelist" upperBound="-1"
+        eType="#//SafeNodeList" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="safenodecontrol" upperBound="-1"
+        eType="#//SafeNodeControl" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="safenodereasearch" upperBound="-1"
+        eType="#//SafeNodeReasearch" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AgentName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="agent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExchangeNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exchange" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="role" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplementsNode" eSuperTypes="#//ReAnode #//setNode #//cheatNode #//ruNode #//ttnode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="implements" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReAnode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="setNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ttnode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ruNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="cheatNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SafeNodeReasearch"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SafeNodeControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SafeNodeList"/>
+</ecore:EPackage>
