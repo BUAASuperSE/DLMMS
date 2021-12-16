@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMPerson">
+  <DirectorOfBoard department="Board" name="MHT" company="Tencent" type="Chairman"/>
+  <DirectorOfBoard department="Board" name="LZP" company="Tencent" type="Executive"/>
+  <HREmployee department="HR" name="MKL" company="Tencent" type="Inspector" directSupervisor="null"/>
+  <HREmployee department="HR" name="WYF" company="Tencent" type="Recruitment" directSupervisor="MKL"/>
+  <DevelopmentEmployee department="Development" name="ZQW" company="Tencent" type="Inspector" directSupervisor="null"/>
+  <DevelopmentEmployee department="Development" name="LN" company="Tencent" type="WebDeveloper" directSupervisor="ZQW"/>
+  <DevelopmentEmployee department="Development" name="LW" company="Tencent" type="MLDeveloper" directSupervisor="ZQW"/>
+  <DevelopmentEmployee department="Development" name="TYR" company="Tencent" type="PM" directSupervisor="ZQW"/>
+  <FinanceEmployee department="Finance" name="TM" company="Tencent" type="Inspector" directSupervisor="null"/>
+  <FinanceEmployee department="Finance" name="KQD" company="Tencent" type="Accounting" directSupervisor="TM"/>
+  <FinanceEmployee department="Finance" name="HYM" company="Tencent" type="Accounting" directSupervisor="TM"/>
+  <FinanceEmployee department="Finance" name="TYY" company="Tencent" type="Inspector" directSupervisor="null"/>
+  <FinanceEmployee department="Finance" name="ZML" company="Tencent" type="Accounting" directSupervisor="TYY"/>
+</xmi:XMI>
