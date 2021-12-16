@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMPersonnel">
+	<Personnel name="Tencent">
+		<board>
+			<directorOfBoard name="MHT" type="Chairman" />
+			<directorOfBoard name="LZP" type="Executive" />
+		</board>
+		<department name="HR">
+			<employee name="MKL" type="Inspector">
+				<management name="WYF" type="Recruitment" />
+			</employee>
+		</department>
+		<department name="Development">
+			<employee name="ZQW" type="Inspector">
+				<management name="LN" type="WebDeveloper" />
+				<management name="LW" type="MLDeveloper" />
+				<management name="TYR" type="PM" />
+			</employee>
+		</department>
+		<department name="Finance">
+			<employee name="TM" type="Inspector">
+				<management name="KQD" type="Accounting" />
+				<management name="HYM" type="Accounting" />
+			</employee>
+			<employee name="TYY" type="Inspector">
+				<management name="ZML" type="Accounting" />
+			</employee>
+		</department>
+	</Personnel>
+</xmi:XMI>
+

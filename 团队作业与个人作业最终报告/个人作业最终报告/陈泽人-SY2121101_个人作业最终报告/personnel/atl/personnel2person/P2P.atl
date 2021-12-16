@@ -1,0 +1,155 @@
+module P2P;
+
+-- @path MMPersonnel=/personnel2person/Personnels.ecore
+-- @path MMPerson=/personnel2person/Persons.ecore
+
+create OUT: MMPerson from IN: MMPersonnel;
+
+
+helper context MMPersonnel!Director def: getCompany(): String = 
+	if not self.fromBoard.oclIsUndefined() then
+		if not self.fromBoard.fromCompany.oclIsUndefined() then
+			self.fromBoard.fromCompany.name
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMPersonnel!Employee def: getDepartment(): String =
+	if self.getEmployeeDepartment() = 'null' then
+		self.getSupervisorDepartment()
+	else
+		self.getEmployeeDepartment()
+	endif;
+	
+
+helper context MMPersonnel!Employee def: getEmployeeDepartment(): String =
+	if not self.fromDepartment.oclIsUndefined() then
+		self.fromDepartment.name
+	else
+		'null'
+	endif;
+
+
+helper context MMPersonnel!Employee def: getSupervisorDepartment(): String = 
+	if not self.directSupervisor.oclIsUndefined() then
+		self.directSupervisor.getEmployeeDepartment()
+	else
+		'null'
+	endif;
+
+
+helper context MMPersonnel!Employee def: getCompany(): String =
+	if self.directSupervisor.oclIsUndefined() then
+		self.getEmployeeCompany()
+	else
+		self.getSupervisorCompany()
+	endif;
+	
+
+helper context MMPersonnel!Employee def: getEmployeeCompany(): String =
+	if not self.fromDepartment.oclIsUndefined() then
+		if not self.fromDepartment.fromCompany.oclIsUndefined() then
+			self.fromDepartment.fromCompany.name
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMPersonnel!Employee def: getSupervisorCompany(): String = 
+	if not self.directSupervisor.oclIsUndefined() then
+		self.directSupervisor.getEmployeeCompany()
+	else
+		'null'
+	endif;
+
+
+helper context MMPersonnel!Employee def: getDirectSupervisor(): String = 
+	if not self.directSupervisor.oclIsUndefined() then
+		self.directSupervisor.name
+	else
+		'null'
+	endif;
+
+		
+helper context MMPersonnel!Employee def: belongToHRDepartment(): Boolean =
+	if self.getDepartment() = 'HR' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMPersonnel!Employee def: belongToDevelopmentDepartment(): Boolean =
+	if self.getDepartment() = 'Development' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMPersonnel!Employee def: belongToFinanceDepartment(): Boolean = 
+	if self.getDepartment() = 'Finance' then
+		true
+	else
+		false
+	endif;
+
+rule Personnel2Director {
+	from 
+		i: MMPersonnel!Director
+	to
+		o: MMPerson!DirectorOfBoard (
+			name <- i.name,
+			type <- i.type,
+			department <- 'Board',
+			company <- i.getCompany()
+		)
+}
+
+
+rule Personnel2HREmployee {
+	from
+		i: MMPersonnel!Employee (i.belongToHRDepartment())
+	to 
+		o: MMPerson!HREmployee (
+			name <- i.name,
+			type <- i.type,
+			department <- i.getDepartment(),
+			company <- i.getCompany(),
+			directSupervisor <- i.getDirectSupervisor()
+		)
+}
+
+
+rule Personnel2DevelopmentEmployee {
+	from
+		i: MMPersonnel!Employee (i.belongToDevelopmentDepartment())
+	to 
+		o: MMPerson!DevelopmentEmployee (
+			name <- i.name,
+			type <- i.type,
+			department <- i.getDepartment(),
+			company <- i.getCompany(),
+			directSupervisor <- i.getDirectSupervisor()
+		)
+}
+
+rule Personnel2FinanceEmployee {
+	from 
+		i: MMPersonnel!Employee (i.belongToFinanceDepartment())
+	to
+		o: MMPerson!FinanceEmployee (
+			name <- i.name,
+			type <- i.type,
+			department <- i.getDepartment(),
+			company <- i.getCompany(),
+			directSupervisor <- i.getDirectSupervisor()
+		)
+}

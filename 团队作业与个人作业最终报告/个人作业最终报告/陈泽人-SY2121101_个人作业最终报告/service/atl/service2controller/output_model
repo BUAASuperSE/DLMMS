@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="MMController">
+  <CPUResourseController rootService="FaceRecognition" rootState="running" name="e5-2667v2" quota="64" state="ok"/>
+  <CPUResourseController rootService="FaceRecognition" rootState="running" name="e3-1231v5" quota="256" state="ok"/>
+  <GPUResourceController rootService="FaceRecognition" rootState="running" name="RTX-3080Ti" quota="32" state="broken"/>
+  <GPUResourceController rootService="FaceRecognition" rootState="running" name="Tesla-V100-32G" quota="128" state="ok"/>
+  <StorageResourceController rootService="FaceRecognition" rootState="running" name="/mnt/lustre/" quota="2048" state="ok"/>
+  <ExecutorController rootService="FaceRecognition" rootState="running" name="A12" state="running" executePolicy="BUAA"/>
+  <ExecutorController rootService="FaceRecognition" rootState="running" name="B08" state="suspended" executePolicy="BUAA"/>
+  <ExecutorController rootService="FaceRecognition" rootState="running" name="u34" state="running" executePolicy="FTKJ"/>
+  <InterfaceController rootService="FaceRecognition" rootState="running" requestUrl="/api/face/" requestMethod="POST" inputArgs="img:Array[byte];seed:int"/>
+  <InterfaceController rootService="FaceRecognition" rootState="running" requestUrl="/api/logs/" requestMethod="GET" inputArgs=""/>
+</xmi:XMI>

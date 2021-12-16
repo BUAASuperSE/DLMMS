@@ -1,0 +1,164 @@
+module S2C;
+
+-- @path MMService=/service2controller/Services.ecore
+-- @path MMController=/service2controller/Controllers.ecore
+
+create OUT: MMController from IN: MMService;
+
+
+helper context MMService!Resource def: getServiceName(): String =
+	if not self.fromService.oclIsUndefined() then
+		self.fromService.name
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Executor def: getServiceName(): String =
+	if not self.executePolicy.oclIsUndefined() then
+		if not self.executePolicy.fromService.oclIsUndefined() then
+			self.executePolicy.fromService.name
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Interface def: getServiceName(): String =
+	if not self.fromService.oclIsUndefined() then
+		self.fromService.name
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Resource def: getServiceState(): String =
+	if not self.fromService.oclIsUndefined() then
+		self.fromService.runningState
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Executor def: getServiceState(): String =
+	if not self.executePolicy.oclIsUndefined() then
+		if not self.executePolicy.fromService.oclIsUndefined() then
+			self.executePolicy.fromService.runningState
+		else
+			'null'
+		endif
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Interface def: getServiceState(): String =
+	if not self.fromService.oclIsUndefined() then
+		self.fromService.runningState
+	else
+		'null'
+	endif;
+
+
+helper context MMService!Resource def: isCPUResource(): Boolean = 
+	if self.type = 'cpu' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMService!Resource def: isGPUResource(): Boolean = 
+	if self.type = 'gpu' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMService!Resource def: isStorageResource(): Boolean = 
+	if self.type = 'storage' then
+		true
+	else
+		false
+	endif;
+
+
+helper context MMService!Executor def: getPolicy(): String =
+	if not self.executePolicy.oclIsUndefined() then
+		self.executePolicy.name
+	else
+		'null'
+	endif;
+
+
+rule Service2CPUResourseController {
+	from 
+		i: MMService!Resource (i.isCPUResource())
+	to
+		o: MMController!CPUResourseController (
+			rootService <- i.getServiceName(),
+			rootState <- i.getServiceState(),
+			name <- i.name,
+			quota <- i.quota,
+			state <- i.state
+		)
+}
+
+
+rule Service2GPUResourceController {
+	from 
+		i: MMService!Resource (i.isGPUResource())
+	to
+		o: MMController!GPUResourceController (
+			rootService <- i.getServiceName(),
+			rootState <- i.getServiceState(),
+			name <- i.name,
+			quota <- i.quota,
+			state <- i.state
+		)
+}
+
+
+rule Service2StorageResourceController {
+	from 
+		i: MMService!Resource (i.isStorageResource())
+	to
+		o: MMController!StorageResourceController (
+			rootService <- i.getServiceName(),
+			rootState <- i.getServiceState(),
+			name <- i.name,
+			quota <- i.quota,
+			state <- i.state
+		)
+}
+
+
+rule Service2ExecutorController {
+	from 
+		i: MMService!Executor 
+	to
+		o: MMController!ExecutorController (
+			rootService <- i.getServiceName(),
+			rootState <- i.getServiceState(),
+			name <- i.name,
+			state <- i.runningState,
+			executePolicy <- i.getPolicy()
+		)
+}
+
+
+rule Service2InterfaceController {
+	from
+		i: MMService!Interface
+	to
+		o: MMController!InterfaceController (
+			rootService <- i.getServiceName(),
+			rootState <- i.getServiceState(),
+			requestUrl <- i.requestUrl,
+			requestMethod <- i.requestMethod,
+			inputArgs <- i.inputArgs
+		)
+}

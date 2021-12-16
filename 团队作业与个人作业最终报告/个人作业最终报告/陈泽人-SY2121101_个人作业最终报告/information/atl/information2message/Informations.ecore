@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MMInformation">
+  <eClassifiers xsi:type="ecore:EClass" name="Information">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sender" ordered="false"
+        lowerBound="1" eType="#//Sender" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="receiver" ordered="false"
+        upperBound="-1" eType="#//Receiver" containment="true" eOpposite="#//User/fromInformation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" ordered="false"
+        upperBound="-1" eType="#//Container" containment="true" eOpposite="#//Container/fromInformation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="User">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromInformation" ordered="false"
+        eType="#//Information" eOpposite="#//Information/receiver"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sender" eSuperTypes="#//User"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Receiver" eSuperTypes="#//User"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" ordered="false"
+        upperBound="-1" eType="#//Content" containment="true" eOpposite="#//Content/fromContainer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromInformation" ordered="false"
+        eType="#//Information" eOpposite="#//Information/container"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Content">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromContainer" ordered="false"
+        eType="#//Container" eOpposite="#//Container/content"/>
+  </eClassifiers>
+</ecore:EPackage>
