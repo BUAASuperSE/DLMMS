@@ -574,11 +574,11 @@ UseCaseModel DLMMS {
 			then
 				self.ModelIDValidated = true and
 				self.Model = model and
+				self.ModelLink = "http://ip:port/link/" + modelId and
+				self.ModelLinkState = "closed" and
 				result = true
 			else
 				self.ModelIDValidated = false and
-				self.ModelLink = "http://ip:port/link/" + modelId and
-				self.ModelLinkState = "closed" and
 				result = false
 			endif
 	}
