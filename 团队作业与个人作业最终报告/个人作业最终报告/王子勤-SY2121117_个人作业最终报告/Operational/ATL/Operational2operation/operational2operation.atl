@@ -1,0 +1,52 @@
+module operational2operation;
+-- @path Operational=/Operational2operation/Operational.ecore
+-- @path operation=/Operational2operation/operation.ecore
+create OUT: operation from IN: Operational;
+rule Operational2operation {
+	from
+		s: Operational!Operational
+	to
+		t: operation!operation (
+			name <- s.name
+		)
+}
+rule OperationalPerformer2performer {
+	from
+		s: Operational!OperationalPerformer
+	to
+		t: operation!performer (
+			name <- s.name
+		)
+}
+rule OperationalArchitecture2architecture {
+	from
+		s: Operational!OperationalArchitecture
+	to
+		t: operation!architecture (
+			name <- s.name
+		)
+}
+rule OperationalMethod2method {
+	from
+		s: Operational!OperationalMethod
+	to
+		t: operation!method (
+			name <- s.name
+		)
+}
+rule OperationalParameter2parameter {
+	from
+		s: Operational!OperationalParameter
+	to
+		t: operation!parameter (
+			name <- s.name
+		)
+}
+rule OperationalParameter2role {
+	from
+		s: Operational!OperationalRole
+	to
+		t: operation!role (
+			name <- s.name
+		)
+}

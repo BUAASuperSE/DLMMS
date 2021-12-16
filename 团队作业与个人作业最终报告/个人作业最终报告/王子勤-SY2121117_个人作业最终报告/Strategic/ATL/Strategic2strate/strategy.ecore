@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="stategy">
+  <eClassifiers xsi:type="ecore:EClass" name="strategy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasTask" eType="#//task"
+        containment="true" eOpposite="#//task/taskOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasPhase" eType="#//phase"
+        containment="true" eOpposite="#//phase/phaseOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasGoal" eType="#//goal"
+        containment="true" eOpposite="#//goal/goalOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasRole" eType="#//role"
+        containment="true" eOpposite="#//role/roleOf"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasAbility" eType="#//ability"
+        containment="true" eOpposite="#//ability/abilityOf"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="task">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskOf" eType="#//strategy"
+        eOpposite="#//strategy/hasTask"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="phase">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="phaseOf" eType="#//strategy"
+        eOpposite="#//strategy/hasPhase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="role">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roleOf" eType="#//strategy"
+        eOpposite="#//strategy/hasRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="goal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="goalOf" eType="#//strategy"
+        eOpposite="#//strategy/hasGoal"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ability">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abilityOf" eType="#//strategy"
+        eOpposite="#//strategy/hasAbility"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
