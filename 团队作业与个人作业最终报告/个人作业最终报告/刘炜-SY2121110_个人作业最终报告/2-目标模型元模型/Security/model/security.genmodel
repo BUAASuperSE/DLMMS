@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Security/src-gen" creationIcons="false" editDirectory="/Security.edit/src-gen"
+    editorDirectory="/Security.editor/src-gen" modelPluginID="Security" modelName="Security"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>security.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Security" disposableProviderFactory="true" ecorePackage="security.ecore#/">
+    <genClasses ecoreClass="security.ecore#//SecurityCategory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//SecurityCategory/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityCategory/name"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityMeasurement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//SecurityMeasurement/set"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityIntegrity"/>
+    <genClasses ecoreClass="security.ecore#//SecurityClassification"/>
+    <genClasses ecoreClass="security.ecore#//SecurityAvailability"/>
+    <genClasses ecoreClass="security.ecore#//Measurement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//Measurement/property"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//MeasurementSet"/>
+    <genClasses ecoreClass="security.ecore#//PropertySet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference security.ecore#//PropertySet/set"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecuritySource">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecuritySource/measurementset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecuritySource/securitytest"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecuritySource/securitysafe"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecuritySource/securityabtext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecuritySource/securityinput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecuritySource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecuritySafe">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecuritySafe/saname"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityABText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityABText/tename"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityInput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecurityInput/securityoutput"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityInput/inname"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecurityOutput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference security.ecore#//SecurityOutput/securitysave"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityOutput/name"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecuritySave"/>
+    <genClasses ecoreClass="security.ecore#//SecurityTest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute security.ecore#//SecurityTest/testname"/>
+    </genClasses>
+    <genClasses ecoreClass="security.ecore#//SecuritySaveProgram"/>
+    <genClasses ecoreClass="security.ecore#//SecuritySaveName"/>
+    <genClasses ecoreClass="security.ecore#//SecuritySaveFile"/>
+  </genPackages>
+</genmodel:GenModel>

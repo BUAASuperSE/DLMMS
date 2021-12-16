@@ -1,0 +1,51 @@
+module UafToLamda;
+
+-- @path s=/UAFMetaToLamda/uAFMetaModel.ecore
+-- @path d=/UAFMetaToLamda/node.ecore
+
+create OUT : d from IN : s;
+
+rule wbe2Document {
+	from
+		rp : s! ResourcePerformer, 
+		ra : s! ResourceAsset,
+		sn : s! SafeName
+	to
+		dc: d!Node(
+			NodeName <- rp.pername,
+			agentname <- thisModule.rp2ag(rp),
+			safenode <- thisModule.ra2sn(ra),
+			filenode <- thisModule.sn2fn(sn),
+			rolenode <- thisModule.ra2sn(ra),
+			exchangenode <- thisModule.sn2fn(sn),
+			resourcenode <- thisModule.ra2sn(ra),
+			operationnode <- thisModule.rp2ag(rp)
+		)
+}
+
+lazy rule rp2ag{
+	from 
+		rp : s! ResourcePerformer
+	to
+		ag: d!AgentName(
+			agent <- rp.pername
+		)
+}
+
+lazy rule ra2sn{
+	from 
+		ra : s! ResourceAsset
+	to
+		safenode: d!SafeNode(
+			safe <- ra.assname
+		)
+}
+
+lazy rule sn2fn{
+	from 
+		sn : s! SafeName
+	to
+		filenode: d!FileNode(
+			file <- sn.name
+		)
+}
