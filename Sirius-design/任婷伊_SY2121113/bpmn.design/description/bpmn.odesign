@@ -10,14 +10,189 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
           </style>
         </nodeMappings>
-        <nodeMappings name="Doocumentation" semanticCandidatesExpression="feature:doocumentation" domainClass="bpmn::Doocumentation">
+        <nodeMappings name="Documentation" semanticCandidatesExpression="feature:documentation" domainClass="bpmn::Documentation">
           <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="EvnentToDoocumentation" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Event']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Doocumentation']" targetFinderExpression="feature:doocumentation">
+        <nodeMappings name="Process" semanticCandidatesExpression="feature::Process" domainClass="bpmn::Process">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Gateway" semanticCandidatesExpression="feature::Gateway" domainClass="bpmn::Gateway">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Data" semanticCandidatesExpression="feature::Data" domainClass="bpmn::Data">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Flow" semanticCandidatesExpression="feature::FlowObject" domainClass="bpmn::FlowObject">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Activity" semanticCandidatesExpression="feature::Activity" domainClass="bpmn::Activity">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Start" semanticCandidatesExpression="feature::Start" domainClass="bpmn::Start">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="End" semanticCandidatesExpression="feature::End" domainClass="bpmn::End">
+          <style xsi:type="style:DotDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Swimlane" semanticCandidatesExpression="feature::Swimlane" domainClass="bpmn::Swimlane">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Communication" semanticCandidatesExpression="bpmn::Communication" domainClass="bpmn::Communication">
+          <style xsi:type="style:SquareDescription" labelSize="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="EventToDocumentation" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Event']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Documentation']" targetFinderExpression="feature:documentation">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToEvent" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Event']" targetFinderExpression="feature::Flow">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToGateway" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Gateway']" targetFinderExpression="feature::Gateway">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToActivity" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Activity']" targetFinderExpression="feature::Activity">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToData" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Data']" targetFinderExpression="feature::Data">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToEnd" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='End']" targetFinderExpression="feature::End">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FlowToSwimlane" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Swimlane']" targetFinderExpression="feature::Swimlane">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="StartToFlow" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Start']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetFinderExpression="feature::Flow">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="StartToEvent" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Start']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Event']" targetFinderExpression="feature::Event">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CommunicationToSwimlane" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Communication']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Swimlane']" targetFinderExpression="feature::Swimlane">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProcessToEvent" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Event']" targetFinderExpression="feature::Event">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProcessToGateway" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Gateway']" targetFinderExpression="feature::Gateway">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProcessToFlow" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']" targetFinderExpression="feature::Flow">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProcessToActivity" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Activity']" targetFinderExpression="feature::Activity">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ProcessToSwimlane" sourceMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']" targetMapping="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Swimlane']" targetFinderExpression="feature::Swimlane">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -35,7 +210,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="DoocumentationCreation" label="create Doocumentation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Doocumentation']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="DocumentationCreation" label="create Doocumentation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Documentation']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -44,7 +219,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="envnetToDoocumentationCreation" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='EvnentToDoocumentation']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="eventToDocumentationCreation" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='EventToDocumentation']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -54,6 +229,149 @@
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="doocumentation" valueExpression="var:target"/>
               </firstModelOperations>
             </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Process" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Process']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Gateway" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Gateway']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Data" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Data']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Flow" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Flow']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Activity" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Activity']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Start" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Start']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create End" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='End']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Swimlane" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Swimlane']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="create Communication" nodeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@nodeMappings[name='Communication']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="flowToSwimlane" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToSwimlane']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create flowToEvent" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToEvent']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create flowToGateway" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToGateway']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create flowToActivity" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToActivity']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create flowToData" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToData']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create flowToEnd" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='FlowToEnd']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create StartToFlow" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='StartToFlow']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create StartToEvent" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='StartToEvent']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create CommunicationToSwimlane" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='CommunicationToSwimlane']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create ProcessToEvent" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='ProcessToEvent']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create ProcessToGateway" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='ProcessToGateway']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create ProcessToFlow" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='ProcessToFlow']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create ProcessToActivity" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='ProcessToActivity']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="create ProcessToSwimlane" edgeMappings="//@ownedViewpoints[name='ProcessViewpoint']/@ownedRepresentations[name='bpmn%20diagram']/@defaultLayer/@edgeMappings[name='ProcessToSwimlane']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation/>
           </ownedTools>
         </toolSections>
       </defaultLayer>
